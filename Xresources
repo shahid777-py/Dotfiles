@@ -1,0 +1,169 @@
+
+! Trasparency (0-1):
+/* *.alpha:1 */
+*.alpha:0.90
+/* *.alpha:0.88 */
+/* *.alpha:0.85 */
+
+! *.font: Inconsolata for Powerline:size=14
+/* st.font: Mononoki Nerd Font:size=16 */
+/* st.font:Monaco:size=16 */
+/* st.font:consolas:size=16 */
+st.font:Consolas for Powerline FixedD:size=16
+/* st.font: */
+/* st.font: */
+/* st.font: */
+/* st.font: */
+
+
+
+Xft.dpi:       96
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.autohint:  true
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+
+!*fading: 8
+*fadeColor: #4C566A
+
+
+/* ! black dark/light */
+/* *color0:                          #1d2021 */
+/* /1* *color0: #282828 *1/ */
+/* *color8:                          #928374 */
+/* !! red dark/light */
+/* *color1:                          #cc241d */
+/* *color9:                          #fb4934 */
+/* !! green dark/light */
+/* /1* *color2:                          #98971a *1/ */
+/* *color2:                          #AD4752 */
+
+
+
+/* *color10:                         #b8bb26 */
+/* !! yellow dark/light */
+/* /1* *color3:                          #d79921  *1/ */
+/* *color3:                          #BF728E */
+
+/* *color11:                         #fabd2f */
+/* !! blue dark/light */
+/* /1* *color4:                          #458588 *1/ */
+/* *color4:                          #7AA198 */
+/* *color12:                         #83a598 */
+/* !! magenta dark/light */
+/* *color5:                          #b16286 */
+/* *color13:                         #d3869b */
+/* !! cyan dark/light */
+/* *color6:                          #689d6a */
+/* *color14:                         #8ec07c */
+/* !! white dark/light */
+/* *color7:                          #a89984 */
+/* *color15:                         #ebdbb2 */
+/* *color16:			  #ac2b1a */
+/* *color256: 			  #1d2021 */
+/* *color257: 			  #ebdbb2 */
+
+*font:mono:size=16
+*fading:                          8
+!*fadeColor:                       black
+/*cursorColor:                     #1ABB9B*/
+*pointerColorBackground:          #2B2C2B
+*pointerColorForeground:          #16A085
+*Xcursor.theme:Maia-Cursor
+* Xcursor.size:                     0
+
+/* *cursorColor:darkorange */
+*cursorColor:#96b5b4
+
+
+
+/* *.background: #282828 */
+/* *.background: #1d2021 */
+/* *.background: #1d1f21 	 /1* Nice Dark 2 *1/ */
+/* *.background: 	#1a292d */
+/* *.foreground: #ebdbb2 */
+
+ /* DWM */
+/* dwm.color0:#444444 	     /* normborder color */
+dwm.color1: #770000         /* selbordercolor */
+! dwm.color2: #282818	     /* norm bg color */
+dwm.color2: #1d1100 	 		/* norm bg color
+! dwm.color2: #292d3e
+			     /* norm bg color */
+dwm.color3: #FAFAFA	     /* norm fg color */
+dwm.color5: #2E456F
+
+/* dwm.color5: #5D7C8A */
+
+ /* sel bg color */
+/* dwm.color5: 	#907151 */
+/* dwm.color5: #9E6432 */
+
+/* dwm.color5: 	#204050 */
+/* dwm.color5: 	#1a292d */
+/* dwm.color5:#6b8c21 */
+/* dwm.color5: #885f5f /1* sel bg color *1/ */
+/* dwm.color5: #d7d7d7 */
+/* dwm.color5:#7c6f64 */
+/* dwm.color5: #9582C0 */
+/* dwm.color4: #000000 */
+/* dwm.color5: #54487A */
+dwm.color4: #FAFAFA
+/* :#924441 */
+
+
+
+
+/* !! gruvbox: */
+/* *.color0: #1d2021 */
+/* *.color1: #cc241d */
+/* *.color2: #98971a */
+/* *.color3: #d79921 */
+/* *.color4: #458588 */
+/* *.color5: #b16286 */
+/* *.color6: #689d6a */
+/* *.color7: #a89984 */
+/* *.color8: #928374 */
+/* *.color9: #fb4934 */
+/* *.color10: #b8bb26 */
+/* *.color11: #fabd2f */
+/* *.color12: #83a598 */
+/* *.color13: #d3869b */
+/* *.color14: #8ec07c */
+/* *.color15: #ebdbb2 */
+/* *.color256: #1d2021 */
+
+
+
+
+
+/* *.background: #0B090E */
+/* *.background: #ebdbb2 */
+/* *.color257: #ebdbb2 */
+
+
+/* !! gruvbox light: */
+/* *.color0: #fbf1c7 */
+/* *.color1: #cc241d */
+/* *.color2: #98971a */
+/* *.color3: #d79921 */
+/* *.color4: #458588 */
+/* *.color5: #b16286 */
+/* *.color6: #689d6a */
+/* *.color7: #7c6f64 */
+/* *.color8: #928374 */
+/* *.color9: #9d0006 */
+/* *.color10: #79740e */
+/* *.color11: #b57614 */
+/* *.color12: #076678 */
+/* *.color13: #8f3f71 */
+/* *.color14: #427b58 */
+/* *.color15: #3c3836 */
+/* *.background: #fbf1c7 */
+/* *.foreground: #282828 */
+/* st.alpha: 0.9 */
+
+

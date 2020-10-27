@@ -1,0 +1,35 @@
+#!/bin/sh
+#dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
+#systemctl --user import-environment DISPLAY
+#WINIT_HIDPI_FACTOR=1
+
+WINIT_X11_SCALE_FACTOR=1
+dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS &
+systemctl --user set-environment DISPLAY=:0 &
+xbacklight -set 15 &
+xwallpaper --zoom ~/.config/wall.png &
+# pidof i3lock || xautolock -time 05 -locker mylock.sh &
+remaps &	# Remap caps key esc & speedy keys
+sxhkd -m -1 & 	#(To escape xbind keys)
+# setbg & 	#(Pywal and wall)
+# pulse.sh & 	#(Pulse Audio kill & start Deamon)
+# buckle & 	#(Keybord Sound Responser)
+help_notif.sh & #(System Manual )
+picom -b &      #(Transparency Deamon)
+dunst &		# Notification deamon
+mpd &		# music player daemon
+# pidof polybar || $HOME/.config/polybar/launch.sh &
+dwmblocks &
+AC_notify &
+transmission-daemon &
+nm.sh &
+# redshift &
+export _JAVA_AWT_WM_NONREPARENTING=1 &
+# autochangewall.sh &
+# restore_alsa() {
+#  while [ -z "$(pidof pulseaudio)" ]; do
+#   sleep 0.5
+#  done
+#  alsactl -f /var/lib/alsa/asound.state restore
+# }
+# restore_alsa &

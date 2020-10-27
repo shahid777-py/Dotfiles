@@ -1,0 +1,23 @@
+{
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.formatting.provider": "pep8",
+  "python.pythonPath": "/home/shahid/anaconda3/bin/python",
+  //  "coc.preferences.formatOnSaveFiletypes": ["html", "css", "json", "python"],
+  "languageserver": {
+    "golang": {
+      "command": "~/.local/share/go/bin/gopls",
+      "filetypes": ["go"]
+    }
+  },
+
+  "explorer.width": 30,
+  "explorer.icon.enableNerdfont": true,
+  "explorer.previewAction.onHover": false,
+  "explorer.keyMappings": {
+    "<cr>": ["expandable?", "expand", "open"],
+    "v": "open:vsplit",
+    "s": "open:split",
+    "T": "open:tabe"
+  }
+}

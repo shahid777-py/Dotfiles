@@ -1,0 +1,241 @@
+# Basic Settings
+set preview true
+set previewer ~/.config/lf/scope
+set color256 true
+set drawbox true
+set icons false
+map I set icons!
+set ignorecase true
+map <bs2> set hidden!
+# set icons		# Enable icons. Requires nerd fonts and LF_ICONS variable.
+$lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
+
+# # map H set hidden true
+# # Custom Functions
+
+cmd open ${{
+    case $(file --mime-type $f -b) in
+	image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        text/*|application/json) $EDITOR $fx;;
+	image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\)\(_large\)*$"| setsid -f sxiv -aio 2>/dev/null | lf-select ;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*) mpv "$f" -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura "$fx" >/dev/null 2>&1 ;;
+        # *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+	 *) xdg-open "$f" ;;
+	 esac
+}}
+
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+}}
+
+cmd sudomkfile ${{
+  printf "File Name: "
+  read ans
+  sudo $EDITOR $ans
+}}
+
+cmd setwallpaper %cp "$f" ~/.config/wall.png && nitrogen --set-scaled "$f"
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd open_config  ${{
+  $EDITOR $(bookmenu -b ~/.config/bookmenu/configs -f fzf -o)
+}}
+
+cmd dragon %dragon-drag-and-drop -a -x $fx
+cmd cpdragon %cpdragon
+cmd mvdragon %mvdragon
+cmd dlfile %dlfile
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd bulkrename ${{
+    vidir
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+# Trash cli bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd clear_trash %trash-empty
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+cmd stripspace %stripspace "$f"
+
+# Bindings
+# Remove some defaults
+map m
+map o
+# map n
+# map "'"
+# map '"'
+map d
+map c
+map e
+map f
+
+# File Openers
+map ee $$EDITOR "$f"
+# map i $view "$f"
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Trash Mappings
+map dd trash
+map tc clear_trash
+map tr restore_trash
+
+# Broot Mapping
+
+# Dragon Mapping
+map dr dragon
+map dm mvdragon
+map dc cpdragon
+map dl dlfile
+
+map ss stripspace
+
+# Basic Functions
+map . set hidden!
+map D delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map mf mkfile
+map mr sudomkfile
+map md mkdir
+map ms $mkscript
+map ch chmod
+# map bg setwallpaper
+map o open_config
+map br $vimv $fx
+map r rename
+map K top
+map J bottom
+map R reload
+map C clear
+map u unselect
+map va selectall
+map <esc> clear
+# map U reverse!
+# Movement
+map gp cd ~/cell
+map gE cd /etc
+map gU. cd /usr
+map gUs cd /usr/share
+####----Shortcuts----####
+map gm cd ~/May
+map g2 cd ~/2020
+map ga cd ~/Courses/Bash/Linux Bash Shell Scripting Complete Guide (incl. AWK  SED)/8. AWK
+map gl cd /home/shahid/Luke_Smith
+map gM cd ~/Entertainment
+map ga cd ~/Entertainment/Animes/
+map g4 cd ~/4Mins_Book
+map gs cd ~/Screen_Cast
+map gc cd ~/Cheatsheets
+map gC cd ~/Courses
+map go cd ~/Others_config
+
+map gp cd ~/Philosophy
+map gL cd ~/Lex_fridman
+map gy cd ~/Videos/Islamic/Yasir_qadi
+map gw cd ~/backgrounds/
+map gv cd ~/Videos
+map gS cd ~/.config/sublime-text-3/Packages
+map gP cd ~/PythonScripting
+map gG cd ~/Courses/Go_Lang
+map gj cd ~/June
+map gb cd ~/.local/bin
+map gt cd ~/Turkey
+map gd cd ~/.config
+map gn cd ~/.config/nvim
+map ; mark-save
+# map ' mark-load
+
+map bg  $setbg "$f"
+map bw  $wal -i %f && setbg %f
+map cW  bulkrename
+map <c-f> $lf -remote "send $id select '$(fzf)'"
+map f $lf -remote "send $id select '$(fzf)'"
+# map J $lf -remote "send $id cd $(cut -d'	' -f2 ${XDG_CONFIG_HOME:-$HOME/.config}/directories | fzf)"
