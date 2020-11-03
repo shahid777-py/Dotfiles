@@ -17,6 +17,8 @@ Plug 'tpope/vim-surround'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'robertbasic/vim-hugo-helper'
 Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'mgee/lightline-bufferline'
+Plug 'jacoborus/tender.vim'
 " Plug 'tmhedberg/SimpylFold'
 " Nerd Icons
 Plug 'ryanoasis/vim-devicons'
@@ -494,7 +496,7 @@ endfunction
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'nord'
+let g:lightline.colorscheme = 'tender'
 
   " vim fzf
 	" nnoremap <A-g> :GFiles<CR>

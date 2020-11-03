@@ -11,19 +11,19 @@ xwallpaper --zoom ~/.config/wall.png &
 # pidof i3lock || xautolock -time 05 -locker mylock.sh &
 remaps &	# Remap caps key esc & speedy keys
 sxhkd -m -1 & 	#(To escape xbind keys)
-# setbg & 	#(Pywal and wall)
+setbg & 	#(Pywal and wall)
 # pulse.sh & 	#(Pulse Audio kill & start Deamon)
 # buckle & 	#(Keybord Sound Responser)
 help_notif.sh & #(System Manual )
-picom -b &      #(Transparency Deamon)
+picom -b &
 dunst &		# Notification deamon
 mpd &		# music player daemon
 # pidof polybar || $HOME/.config/polybar/launch.sh &
 dwmblocks &
 AC_notify &
 transmission-daemon &
-nm.sh &
-# redshift &
+# nm.sh &
+redshift &
 export _JAVA_AWT_WM_NONREPARENTING=1 &
 # autochangewall.sh &
 # restore_alsa() {

@@ -2,31 +2,31 @@
 set preview true
 set previewer ~/.config/lf/scope
 set color256 true
-set drawbox true
-set icons false
+# set drawbox true
+set icons true
 map I set icons!
 set ignorecase true
 map <bs2> set hidden!
 # set icons		# Enable icons. Requires nerd fonts and LF_ICONS variable.
+
+# Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 
-# # map H set hidden true
-# # Custom Functions
-
+# cmds/functions
 cmd open ${{
     case $(file --mime-type $f -b) in
 	image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
-        text/*|application/json) $EDITOR $fx;;
+        text/*) $EDITOR $fx;;
 	image/x-xcf|image/svg+xml) setsid -f gimp $f >/dev/null 2>&1 ;;
-	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\)\(_large\)*$"| setsid -f sxiv -aio 2>/dev/null | lf-select ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\)\(_large\)*$" | sxiv -aio 2>/dev/null | lf-select ;;
 	audio/*) mpv --audio-display=no $f ;;
-	video/*) mpv "$f" -quiet >/dev/null 2>&1 ;;
-	application/pdf|application/vnd*|application/epub*) setsid -f zathura "$fx" >/dev/null 2>&1 ;;
-        # *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
-	 *) xdg-open "$f" ;;
-	 esac
+	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    esac
 }}
-
+# # map H set hidden true
+# # Custom Functions
 
 cmd mkdir ${{
   printf "Directory Name: "
@@ -228,7 +228,8 @@ map gG cd ~/Courses/Go_Lang
 map gj cd ~/June
 map gb cd ~/.local/bin
 map gt cd ~/Turkey
-map gd cd ~/.config
+map gd cd ~/Downloads
+map gD cd ~/.config/
 map gn cd ~/.config/nvim
 map ; mark-save
 # map ' mark-load

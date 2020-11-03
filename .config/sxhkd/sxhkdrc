@@ -2,6 +2,8 @@
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+alt + space 
+	remaps
 
 alt + t
 	st -e transmission-remote-cli
@@ -74,9 +76,9 @@ alt + period
 alt + comma
 	vol_down;pkill -RTMIN+10 dwmblocks
 alt + w
-	wifi on && notify-send " wifi on 📡" ; wait 7 && pkill -RTMIN+8 dwmblocks
+	wifi on && notify-send " wifi on 📡"  && pkill -RTMIN+8 dwmblocks
 alt + shift + w
-	wifi off && notify-send " wifi off 🛑" ; wait 7 && pkill -RTMIN+8 dwmblocks
+	wifi off && notify-send " wifi off 🛑" && pkill -RTMIN+8 dwmblocks
 super + shift + m
 	dmenumount
 super + shift + u
@@ -137,7 +139,7 @@ alt + m
 alt + shift + m
 	$TERMINAL -e "cmni"
 alt + 1
-	help_keys.sh
+	xrdb ~/Xresources
 alt + shift + h
 	$TERMINAL -e "help_keys_edit.sh"
 super + shift + x

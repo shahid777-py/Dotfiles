@@ -1,15 +1,15 @@
 
 ! Trasparency (0-1):
 /* *.alpha:1 */
-*.alpha:0.90
+/* *.alpha:0.90 */
 /* *.alpha:0.88 */
 /* *.alpha:0.85 */
 
 ! *.font: Inconsolata for Powerline:size=14
 /* st.font: Mononoki Nerd Font:size=16 */
 /* st.font:Monaco:size=16 */
-/* st.font:consolas:size=16 */
-st.font:Consolas for Powerline FixedD:size=16
+/* st.font:Consolas for Powerline FixedD:size=16 */
+st.font:Consolas for Powerline FixedD:size=18
 /* st.font: */
 /* st.font: */
 /* st.font: */
@@ -27,7 +27,7 @@ Xft.lcdfilter: lcddefault
 
 
 !*fading: 8
-*fadeColor: #4C566A
+/* *fadeColor: #4C566A */
 
 
 /* ! black dark/light */
@@ -117,29 +117,6 @@ dwm.color4: #FAFAFA
 
 
 
-/* !! gruvbox: */
-/* *.color0: #1d2021 */
-/* *.color1: #cc241d */
-/* *.color2: #98971a */
-/* *.color3: #d79921 */
-/* *.color4: #458588 */
-/* *.color5: #b16286 */
-/* *.color6: #689d6a */
-/* *.color7: #a89984 */
-/* *.color8: #928374 */
-/* *.color9: #fb4934 */
-/* *.color10: #b8bb26 */
-/* *.color11: #fabd2f */
-/* *.color12: #83a598 */
-/* *.color13: #d3869b */
-/* *.color14: #8ec07c */
-/* *.color15: #ebdbb2 */
-/* *.color256: #1d2021 */
-
-
-
-
-
 /* *.background: #0B090E */
 /* *.background: #ebdbb2 */
 /* *.color257: #ebdbb2 */
@@ -165,5 +142,26 @@ dwm.color4: #FAFAFA
 /* *.background: #fbf1c7 */
 /* *.foreground: #282828 */
 /* st.alpha: 0.9 */
+
+/* *.color0: #32302f */
+/* *.color1: #cc241d */
+/* *.color2: #a9b665 */
+/* *.color3: #d8a657 */
+/* *.color4: #7daea3 */
+/* *.color5: #d3869b */
+/* *.color6: #89b482 */
+/* *.color7: #d4be98 */
+/* *.color8: #928374 */
+/* *.color9: #ea6962 */
+/* *.color10: #a9b665 */
+/* *.color11: #d8a657 */
+/* *.color12: #7daea3 */
+/* *.color13: #d3869b */
+/* *.color14: #89b482 */
+/* *.color15: #ddc7a1 */
+/*  *.foreground:   #d4be98 */
+
+/* *.background:   #eeeeee */
+/* *.cursorColor:  #d4be98 */
 
 

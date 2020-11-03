@@ -46,7 +46,7 @@ macro C set browser "youtube-viewer --comments=%u" ; open-in-browser ; set brows
 
 highlight all "---.*---" yellow
 highlight feedlist ".*(0/0))" black
-highlight article "(^Feed:.*|^Title:.*|^Author:.*)" color4 default 
+highlight article "(^Feed:.*|^Title:.*|^Author:.*)" color4 black 
 highlight article "(^Link:.*|^Date:.*)" cyan default
 highlight article "https?://[^ ]+" green default
 highlight article "^(Title):.*$" color4 default bold
