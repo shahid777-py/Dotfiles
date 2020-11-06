@@ -3,7 +3,8 @@
 # super + c
 # 	st -e "calcurse"
 alt + space 
-	remaps
+	xset r rate 300 50 && setxkbmap -option caps:escape
+
 
 alt + t
 	st -e transmission-remote-cli

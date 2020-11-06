@@ -492,11 +492,33 @@ function! ToggleAlpha()
 	endif
 endfunction
 
+"Colorscheme Swithcer Function
+let s:color = 1       "Gruvbox Activated"
+function! ToggleColor()
+	if s:color == 1
+		" hi Normal ctermbg=NONE guibg=NONE
+		set notermguicolors
+		colorscheme default
+		set bg=light
+		let s:color = 0
+		let g:lightline = {}
+		let g:lightline.colorscheme = 'tender'
+	else
+		set bg=dark
+		set termguicolors
+		colorscheme gruvbox
+		hi Normal ctermbg=NONE guibg=NONE
+		let g:lightline = {}
+		let g:lightline.colorscheme = 'gruvbox'
+		let s:color = 1
+	endif
+endfunction
+
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'tender'
+let g:lightline.colorscheme = 'gruvbox'
 
   " vim fzf
 	" nnoremap <A-g> :GFiles<CR>
@@ -518,17 +540,18 @@ let g:lightline.colorscheme = 'tender'
 		\   'left': '', 'right': ''
 	  \}
 
-	set bg=light
-	" set bg=dark
-	" set termguicolors
-	" colorscheme gruvbox
+	" set bg=light
+	set bg=dark
+	set termguicolors
+	colorscheme gruvbox
 	" " let g:deus_termcolors=256
-	" hi Normal ctermbg=NONE guibg=NONE
+	hi Normal ctermbg=NONE guibg=NONE
 	" hi NonText ctermbg=NONE guibg=NONE
 	" nnoremap <M-n> :colorscheme gruvbox<CR>
 	" nnoremap <silent><A-t> :hi Normal ctermbg=NONE guibg=NONE<CR>
 
-	nnoremap <silent><C-t> :call ToggleAlpha()<cr>
+	" nnoremap <silent><C-t> :call ToggleAlpha()<cr>
+	nnoremap <C-t> : call ToggleColor()<cr>
 
 
 source $HOME/.config/nvim/my_snippets.vim
