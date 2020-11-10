@@ -2,9 +2,12 @@
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+alt + p
+	pauseall_mpv.sh
 alt + space 
 	xset r rate 300 50 && setxkbmap -option caps:escape
-
+alt + b
+	pidof picom && pkill picom || picom -b
 
 alt + t
 	st -e transmission-remote-cli
@@ -24,8 +27,8 @@ alt + Return
 	alacritty
 alt + h
 	op_swap.sh
-alt + p
-	notify-send "📔Pluto opening" && julia ~/.local/bin/pluto.jl
+# alt + p
+# 	notify-send "📔Pluto opening" && julia ~/.local/bin/pluto.jl
 	
 # alt + l
 # 	lockscreen

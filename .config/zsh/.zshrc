@@ -167,7 +167,8 @@ zstyle ':completion:*' rehash true
 
 # Anaconda to load
 export PATH="/home/shahid/anaconda3/bin:$PATH"
-export PATH="/home/shahid/node_modules/phantomjs:$PATH"
+export PATH="/home/shahid/.npm-global/lib/node_modules/html-pdf/node_modules/phantomjs-prebuilt/lib/phantom/bin/:$PATH"
+
 # export PATH="~/cell/Pages/en:$PATH"
 
 
@@ -283,8 +284,10 @@ export ANDROID_HOME=/opt/android-sdk
 killpicom(){
 	
 	pidof picom && pkill picom || picom -b
+	zle reset-prompt; zle redisplay
 }
-bindkey "^B" killpicom
+# zle -N killpicom
+bindkey "^b" killpicom
 
 
 # Z.lua config

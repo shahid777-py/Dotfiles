@@ -8,13 +8,14 @@
 ! *.font: Inconsolata for Powerline:size=14
 /* st.font: Mononoki Nerd Font:size=16 */
 /* st.font:Monaco:size=16 */
-/* st.font:Consolas for Powerline FixedD:size=16 */
-st.font:Consolas for Powerline FixedD:size=18
-/* st.font: */
-/* st.font: */
-/* st.font: */
-/* st.font: */
+/* st.font:SF Mono:style=Medium:size=16 */
 
+/* st.font:Consolas for Powerline FixedD:size=18 */
+/* st.font: */
+/* st.font: */
+/* st.font: */
+/* st.font: */
+/* *.font:	Liberation Mono:pixelsize=18:antialias=true:autohint=true; */
 
 
 Xft.dpi:       96
@@ -66,7 +67,6 @@ Xft.lcdfilter: lcddefault
 /* *color256: 			  #1d2021 */
 /* *color257: 			  #ebdbb2 */
 
-*font:mono:size=16
 *fading:                          8
 !*fadeColor:                       black
 /*cursorColor:                     #1ABB9B*/
@@ -94,7 +94,9 @@ dwm.color2: #1d1100 	 		/* norm bg color
 ! dwm.color2: #292d3e
 			     /* norm bg color */
 dwm.color3: #FAFAFA	     /* norm fg color */
-dwm.color5: #2E456F
+dwm.color5: 	#1a292d
+/* dwm.color5: 	#204050 */
+/* dwm.color5: #885f5f /1* sel bg color *1/ */
 
 /* dwm.color5: #5D7C8A */
 
@@ -102,17 +104,13 @@ dwm.color5: #2E456F
 /* dwm.color5: 	#907151 */
 /* dwm.color5: #9E6432 */
 
-/* dwm.color5: 	#204050 */
-/* dwm.color5: 	#1a292d */
 /* dwm.color5:#6b8c21 */
-/* dwm.color5: #885f5f /1* sel bg color *1/ */
 /* dwm.color5: #d7d7d7 */
 /* dwm.color5:#7c6f64 */
 /* dwm.color5: #9582C0 */
 /* dwm.color4: #000000 */
 /* dwm.color5: #54487A */
-dwm.color4: #FAFAFA
-/* :#924441 */
+/* dwm.color4: #FAFAFA */
 
 
 
@@ -164,4 +162,19 @@ dwm.color4: #FAFAFA
 /* *.background:   #eeeeee */
 /* *.cursorColor:  #d4be98 */
 
-
+/* *.color0: #19100e */
+/* *.color1: #DE5519 */
+/* *.color2: #9D7255 */
+/* *.color3: #CE784E */
+/* *.color4: #F99B31 */
+/* *.color5: #FED32F */
+/* *.color6: #8C8B72 */
+/* *.color7: #cabcac */
+/* *.color8: #8d8378 */
+/* *.color9: #DE5519 */
+/* *.color10:#9D7255 */
+/* *.color11:#CE784E */
+/* *.color12:#F99B31 */
+/* *.color13:#FED32F */
+/* *.color14:#8C8B72 */
+/* *.color15:#cabcac */

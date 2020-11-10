@@ -237,7 +237,8 @@ map gS cd ~/.config/sublime-text-3/Packages
 map gP cd ~/PythonScripting
 map gG cd ~/Courses/Go_Lang
 map gj cd ~/June
-map gb cd ~/.local/bin
+map gB cd ~/.local/bin
+map gb cd ~/Books
 map gt cd ~/Turkey
 map gd cd ~/Downloads
 map gD cd ~/.config/
