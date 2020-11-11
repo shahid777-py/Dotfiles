@@ -26,6 +26,19 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 #     esac
 # }}
 
+cmd lfc  ${{
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}}
 
 
 # Custom Functions
@@ -163,7 +176,7 @@ map f
 # File Openers
 map ee $$EDITOR "$f"
 # map i $view "$f"
-
+map q $$lfc
 # Archive Mappings
 map az zip
 map at tar
@@ -211,16 +224,17 @@ map va selectall
 map <esc> clear
 # map U reverse!
 # Movement
-map gp cd ~/cell
+map gp cd ~/PythonScripting
+map ge cd ~/Entertainment
 map gE cd /etc
 map gU. cd /usr
 map gUs cd /usr/share
 ####----Shortcuts----####
-map gm cd ~/May
+map gm cd ~/Entertainment/Movies
 map g2 cd ~/2020
 map ga cd ~/Courses/Bash/Linux Bash Shell Scripting Complete Guide (incl. AWK  SED)/8. AWK
 map gl cd /home/shahid/Luke_Smith
-map gM cd ~/Entertainment
+map gM cd ~/Entertainment/Comedy_Movies
 map ga cd ~/Entertainment/Animes/
 map g4 cd ~/4Mins_Book
 map gs cd ~/Screen_Cast
@@ -228,7 +242,6 @@ map gc cd ~/Cheatsheets
 map gC cd ~/Courses
 map go cd ~/Others_config
 
-map gp cd ~/Philosophy
 map gL cd ~/Lex_fridman
 map gy cd ~/Videos/Islamic/Yasir_qadi
 map gw cd ~/backgrounds/

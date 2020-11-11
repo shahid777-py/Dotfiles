@@ -560,3 +560,7 @@ source $HOME/.config/nvim/my_snippets.vim
 noremap Q :noautocmd qall!<CR>
 
 au BufRead,BufNewFile *urls set filetype=sh
+
+
+" map <C-K> :pyf <path-to-this-file>/clang-format.py<cr>
+" imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
