@@ -142,8 +142,8 @@ alt + m
 	cmop
 alt + shift + m
 	$TERMINAL -e "cmni"
-alt + 1
-	xrdb ~/Xresources
+# alt + 1
+# 	xrdb ~/Xresources
 alt + shift + h
 	$TERMINAL -e "help_keys_edit.sh"
 super + shift + x
@@ -166,7 +166,7 @@ super + w
 # super + Tab
 # 	 rofi -show drun -theme dmenu
 super + g
-	$TERMINAL -e gotop
+	st -e gotop
 super + BackSpace
 	prompt "Reboot Computer ?" "reboot"
 super + shift + b

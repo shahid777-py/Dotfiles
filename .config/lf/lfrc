@@ -1,4 +1,4 @@
-# Basic Settings
+#https://www.youtube.com/watch?v=n7lYxXrzbjk Basic Settings
 set preview true
 set previewer ~/.config/lf/scope
 set color256 true
@@ -176,7 +176,7 @@ map f
 # File Openers
 map ee $$EDITOR "$f"
 # map i $view "$f"
-map q $$lfc
+# map q $$lfc
 # Archive Mappings
 map az zip
 map at tar
