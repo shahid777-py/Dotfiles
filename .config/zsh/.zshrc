@@ -292,3 +292,9 @@ bindkey "^b" killpicom
 
 # Z.lua config
 eval "$(lua $HOME/.config/z.lua/z.lua --init zsh)"
+
+
+LFCD="$HOME/.config/lf/lfcd.sh"
+if [ -f "$LFCD" ]; then
+    source "$LFCD"
+fi
