@@ -159,7 +159,8 @@ dwm.color5: 	#1a292d
 /* *.color15: #ddc7a1 */
 /*  *.foreground:   #d4be98 */
 
-/* *.background:   #eeeeee */
+/* *.background:   #060C15 */
+
 /* *.cursorColor:  #d4be98 */
 
 /* *.color0: #19100e */

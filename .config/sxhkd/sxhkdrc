@@ -2,6 +2,10 @@
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+super + u
+	wal --theme ~/colors.json
+super + Print
+	i3-scrot -w 
 alt + p
 	pauseall_mpv.sh
 alt + space 

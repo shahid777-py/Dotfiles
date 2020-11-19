@@ -160,7 +160,7 @@ cmd restore_trash ${{
 }}
 
 cmd stripspace %stripspace "$f"
-
+cmd lfcd $pwd ; lf $pwd
 # Bindings
 # Remove some defaults
 map m
@@ -241,6 +241,7 @@ map gs cd ~/Screen_Cast
 map gc cd ~/Cheatsheets
 map gC cd ~/Courses
 map go cd ~/Others_config
+map q lfcd
 
 map gL cd ~/Lex_fridman
 map gy cd ~/Videos/Islamic/Yasir_qadi
