@@ -25,6 +25,7 @@ transmission-daemon &
 # nm.sh &
 redshift &
 export _JAVA_AWT_WM_NONREPARENTING=1 &
+history >> ~/dotfiles/history.txt &
 # autochangewall.sh &
 # restore_alsa() {
 #  while [ -z "$(pidof pulseaudio)" ]; do

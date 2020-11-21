@@ -13,9 +13,11 @@ https://www.edn.com/feed "~EDN"
 
 "---Code(News)---"
 https://realpython.com/atom.xml "~Real Python"
+https://hackernoon.com/feed
 https://itsfoss.com/feed/ "~Its Foss"
 https://itsfoss.com/category/fun/feed/ "~Fun(Its Foss)"
 https://itsfoss.com/category/programming/feed/ "~Programming(Its Foss)"
+https://linoxide.com/comments/feed/
 https://itsfoss.com/category/terminal-tricks/feed "~Terminal(Its Foss)"
 https://www.cyberciti.biz/atom/atom.xml "~NixCraft Feed"
 https://hirinfotech.com/feed/ "Web Scraping"
@@ -39,6 +41,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~M
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Roberston"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~Distro tube"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCFQMnBA3CS502aghlcr0_aw "~Coffeezilla"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC9IuUwwE2xdjQUT_LMLONoA "~Julia"
 "---RedPill---"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC3TUCGI-7rSjvHsE4ONXRww "~Millenia Thinker(Youtube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC8uY6yLP9BS4BUc9BSc0Jww "~Nassim Taleb(Youtube)"

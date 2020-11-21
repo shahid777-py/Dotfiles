@@ -1,0 +1,541 @@
+    1  ytb https://www.youtube.com/watch\?v\=HfPKe98UqEI
+    2  ytb https://www.youtube.com/watch\?v\=-rSqbgI7oZM\&t\=12s
+    3  ytb https://www.youtube.com/watch\?v\=UydNRZp_fmk
+    4  pq base-dlevel
+    5  p -S base-dlevel
+    6  p -S base-devel
+    7  git clone https://aur.archlinux.org/trizen.git
+    8  cd trizen
+    9  makepkg -sri
+   10  trizen -S fingerprint-gui
+   11  ytb https://www.youtube.com/watch\?v\=XYpJhhJOJSs
+   12  yay fingerprint-gui
+   13  p -S gdm
+   14  p -Syu
+   15  p -S gdm
+   16  gdm
+   17  sudo gdm
+   18  sudo pacman -S gnome
+   19  p -R gdm
+   20  sudo pacman -S gnome
+   21  gallery-dl https://www.deviantart.com/pajunen/art/Urban-Jungle-795617738
+   22  lfcd
+   23  cd ./gallery-dl/deviantart/Pajunen
+   24  rn
+   25  alias gallery-dl
+   26  a
+   27  cd ./gallery-dl/deviantart/Pajunen
+   28  gdl https://www.deviantart.com/pajunen/art/The-Portal-811663955
+   29  rn
+   30  gdl https://www.deviantart.com/vablo/art/Forest-Village-491260831
+   31  gdl https://www.deviantart.com/needanewname/art/Path-through-forest-STOCK-132836677
+   32  gdl https://www.deviantart.com/sacral-stock/art/autumn-forest-2-44268803
+   33  gdl https://www.deviantart.com/saeppo/art/Blue-hour-790371959
+   34  gdl https://www.deviantart.com/mabuli/art/Branches-807831507
+   35  gdl https://www.deviantart.com/ulver-av-nord/art/Family-Commission-772969093
+   36  gdl https://unsplash.com/photos/2aCuwSh4RRk
+   37  z nov
+   38  ytb https://www.youtube.com/watch\?v\=QLtU2cJE1d0
+   39  lf -last-dir-path="$tmp"
+   40  read
+   41  Working Directory
+   42  man lf
+   43  man read
+   44  read $pwd
+   45  cd /etc/lf
+   46  cd .config/lf
+   47  curl https://raw.githubusercontent.com/gokcehan/lf/master/etc/lfcd.sh -o ~/.config/lf/lfcd.sh
+   48  ls
+   49  lfcd
+   50  cd dotfiles
+   51  git status
+   52  git add .config/zsh/.zshrc
+   53  git status
+   54  git commit -m "Added lfcd path and script"
+   55  git push git@gitlab.com:He_Love_To_Code/dotfiles.git master
+   56  git add .
+   57  git commit -m "few changes"
+   58  git push git@gitlab.com:He_Love_To_Code/dotfiles.git master
+   59  lfcd
+   60  $(dirname $f)
+   61  $(dirname $pwd)
+   62  dirname
+   63  dirname -h
+   64  man dirname 
+   65  pwd
+   66  echo $lfcd
+   67  LFCD
+   68  echo $LFCD
+   69  cd .config/lf
+   70  chmod 777 lfcd.sh
+   71  lfcd
+   72  lf lfcd
+   73  st -e lfcd
+   74  st -e $lfcd
+   75  lfcd
+   76  st -e ~/.config/lf/lfcd.sh
+   77  sh ~/.config/lf/lfcd
+   78  sh ~/.config/lf/lfcd.sh
+   79  lfcd
+   80  cp ~/.config/lf/lfcd.sh ~/.local/bin
+   81  lfcd.sh
+   82  lfcd
+   83  lfcd\n
+   84  z
+   85  z | less
+   86  npm install -g google-translate-cli
+   87  translate -h
+   88  translate -l
+   89  translate -l | urdu
+   90  translate -l | rg urdu
+   91  translate -l | grep urdu
+   92  translate -l | grep -i urdu
+   93  translate "i love you" 
+   94  translate "i love you"  -t Urdu
+   95  translate -t Urdu "i love you"  
+   96  translate -l | grep -i urdu
+   97  translate -t ur "i love you"  
+   98  translate "love" -t ur
+   99  translate "love" -t tr
+  100  translate "i love you " -t tr
+  101  killall pcmanfm
+  102  lfcd()
+  103  lfcd
+  104  st -e "lfcd"
+  105  st -e "lfcd\n"
+  106  zsh lfcd
+  107  zsh lfcd()
+  108  zsh lfcd.sh
+  109  lfcd.sh
+  110  mktemp
+  111  mktemp -h
+  112  man mktemp
+  113  echo $@
+  114  man @
+  115  $@
+  116  cat "$tmp"
+  117  echo $?
+  118  man lf
+  119  lfcd
+  120  man lf -remote
+  121  sh
+  122  q
+  123  exit
+  124  dash
+  125  st -e dash
+  126  ls | grep ".txt"
+  127  man chsh
+  128  chsh -l
+  129  git-shell
+  130  fish
+  131  man pass
+  132  dash
+  133  ni /usr/bin/pass
+  134  ni /usr/bin/passwd
+  135  gpg -k
+  136  gnuplot_qt
+  137  ni .cache/wal/colors.json
+  138  x
+  139  ls
+  140  zbarimg
+  141  salah
+  142  sudo gparted
+  143  lsblk
+  144  sudo gparted
+  145  mount
+  146  mount | grep "/dev/sda1"
+  147  sudo chown shahid:/run/media/shahid/5714d100-df97-4e65-a2ad-33fc9049a74d type ext4 (rw,nosuid,nodev,relatime,uhelper=udisks2)\n
+  148  sudo chown shahid: /run/media/shahid/5714d100-df97-4e65-a2ad-33fc9049a74d\n
+  149  nmtui
+  150  lsblk
+  151  mount | grep "/dev/sda1"
+  152  cd /run/media/shahid/E976-17F6 
+  153  ls
+  154  lfcd
+  155  cd /run/media/shahid/E976-17F6 
+  156  b
+  157  ls
+  158  mount | grep "/dev/sda1"
+  159  mount | grep "/dev/sda1" | cut -d"," -f 3
+  160  mount | grep "/dev/sda1" | cut -d"," -f 1
+  161  mount | grep "/dev/sda1" | cut -d"," -f 2
+  162  mount | grep "/dev/sda1" | cut -d" " -f 2
+  163  mount | grep "/dev/sda1" | cut -d" " -f 3
+  164  vidir
+  165  \tDIR=$(mount | grep "/dev/sda1" | cut -d" " -f 3);\n\tcd $DIR\n
+  166  ls
+  167  cd Entertainment/Animes
+  168  sudo rm -r Shiki\ \(2010\)
+  169  ls
+  170  lfcd
+  171  free -h
+  172  df -h
+  173  la
+  174  df -h
+  175  du
+  176  du -h
+  177  dust
+  178  du -h
+  179  lfcd
+  180  df -h
+  181  dust
+  182  cd dotfiles
+  183  ls
+  184  cd .config/mpv
+  185  cd .config
+  186  mkd mpv
+  187  ls
+  188  cd mpv
+  189  ln -s ~/.config/mpv/mpv.conf ./mpv.conf
+  190  ls
+  191  ln -s ~/.config/mpv/input.conf ./input.conf
+  192  ls
+  193  bb
+  194  ls ~/ | grep "history
+  195  ls ~/ | grep "history"
+  196  ls ~/. | grep "history"
+  197  man history
+  198  event
+  199  find history.log
+  200  locate history.log
+  201  locate history
+  202  locate history.txt
+  203  ls ~/.
+  204  ls ~/. | grep "."
+  205  ls ~/ | grep "*."
+  206  ls ~/ | grep "*\."
+  207  ls ~/ | grep "\."
+  208  ls ~/ | grep "\.log"
+  209  ls ~/ | grep "\.txt"
+  210  ni ~/20_Linux_Command_Tips_and_Tricks_That_Will_Save_You_A_Lot_of_Time.txt
+  211  w3m ~/20_Linux_Command_Tips_and_Tricks_That_Will_Save_You_A_Lot_of_Time.txt
+  212  newsboat  20_Linux_Command_Tips_and_Tricks_That_Will_Save_You_A_Lot_of_Time.txt
+  213  ls
+  214  cd dotfiles
+  215  ls
+  216  lfcd
+  217  cd Downloads
+  218  lfcd
+  219  ffmpeg \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv
+  220  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -f lavfi -i aevalsrc=o -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental "out.mp4"
+  221  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -f lavfi aevalsrc=o -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental "out.mp4"
+  222  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -f lavfi -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental "out.mp4"
+  223  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -f lavfi -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental out.mp4
+  224  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental "out.mp4"
+  225  lfcd
+  226  cd ~/Downloads/Code_Geass
+  227  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -c copy -profile:v baseline ou1.mp4
+  228  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -c copy -profile:v baseline -crf 23  ou1.mp4
+  229  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -c copy -profile:v baseline -crf 23 -strict experimental ou1.mp4
+  230  ffmpeg -i \[Kayoanime\]\ Code\ Geass\ S1\ -\ 22.mkv -shortest -c:v libx264 -profile:v baseline -crf 23 -c:a aac -strict experimental "22.mp4"
+  231  cd Entertainment/Animes
+  232  ls
+  233  cd \[AnimeKaizoku\]\ Rurouni\ Kenshin\ 480p\ Dual\ Audio\ \[AM63\]
+  234  ls
+  235  cp 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv ~/Downloads/Code_Geass
+  236  lfcd
+  237  ffmpeg 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv
+  238  ffmpeg -i 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv  -c:v copy -c:a aac out2.mp4
+  239  cd ~/Entertainment/Animes
+  240  ls
+  241  cd \[AnimeKaizoku\]\ Rurouni\ Kenshin\ 480p\ Dual\ Audio\ \[AM63\]
+  242  ls
+  243  b
+  244  cd \[AnimeKaizoku\]\ Rurouni\ Kenshin\ 480p\ Dual\ Audio\ \[AM63\]
+  245  for i in *.mkv; do ffmpeg -i "$i" -c:a aac "${i%.mkv}.mp4"; done
+  246  ls
+  247  lfcd
+  248  ausc aac_convert.sh
+  249  cd Downloads/Code_Geass
+  250  ls
+  251  lfcd
+  252  ls
+  253  aac_convert.sh 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv
+  254  filename
+  255  file
+  256  man file
+  257  clip
+  258  mp4file
+  259  man mp4file
+  260  aac_convert.sh 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv
+  261  lfcd
+  262  aac_convert.sh 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv
+  263  ffmpeg -i 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv  -c:v copy -c:a aac 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv.mp4
+  264  aac_convert.sh 02.\ Kid\ Samurai\ -\ A\ Big\ Ordeal\ and\ a\ New\ Student.mkv
+  265  lfcd
+  266  ffmpeg -i 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv  -c:v copy -c:a aac -map 0:0 -map 0:1 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv.mp4
+  267  lfcd
+  268  ffmpeg -i 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv  -c:v copy -c:a aac -map 0:0 -map 1:1 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv.mp4
+  269  ffmpeg -i 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv  -c:v copy -c:a aac -map 0:0 -map 0:2 01.\ The\ Handsome\ Swordsman\ of\ Legend\ -\ A\ Man\ who\ Fights\ for\ Love.mkv.mp4
+  270  aac_convert.sh "02. Kid Samurai - A Big Ordeal and a New Student.mkv"
+  271  rn
+  272  aac_convert.sh 02._Kid_Samurai_-_A_Big_Ordeal_and_a_New_Student.mkv
+  273  aac_convert.sh 03._Swordsman_of_Sorrow_-_The_Man_Who_Slays_His_Past.mp4
+  274  aac_convert.sh 04._Bad\!_Introducing_Sanosuke,_Fighter-for-hire.mp4
+  275  ls
+  276  lfcd
+  277  cd Entertainment/Animes
+  278  lfcd
+  279  ffmpeg -i 04._Bad\!_Introducing_Sanosuke,_Fighter-for-hire.mp4 -c:a aac -map 0:0 -map 0:1 04._Bad\!_Introducing_Sanosuke,_Fighter-for-hire.mp4.mp4
+  280  npm install --save text-meme
+  281  cd Videos/NOV
+  282  mkd 20
+  283  cd 20
+  284  ytb https://www.youtube.com/watch\?v\=HYRqc-4K0ck
+  285  ls
+  286  rm *
+  287  ls
+  288  ytb -F 22 https://www.youtube.com/watch\?v\=HYRqc-4K0ck
+  289  ytb -f 22 https://www.youtube.com/watch\?v\=HYRqc-4K0ck
+  290  ytb -f 22 https://www.youtube.com/watch\?v\=lhcvejeAB0E
+  291  ytb -f 22 https://www.youtube.com/watch\?v\=i8kAKcpYEEQ
+  292  ytb -f 22 https://www.youtube.com/watch\?v\=HKxzP6JjQ98
+  293  ytb -f 22 https://www.youtube.com/watch\?v\=uC_fZHRrrIE
+  294  ytb -f 22 https://www.youtube.com/watch\?v\=c2Yd-KRLhDA
+  295  ytb -f 22 https://www.youtube.com/watch\?v\=wMBxAL7pviQ
+  296  ytb -f 22 https://www.youtube.com/watch\?v\=pWbQy3I9OCo
+  297  ytb -f 22 https://www.youtube.com/watch\?v\=ToQOvlCy0mc
+  298  ytb -f 22 https://www.youtube.com/watch\?v\=ac9yPwFiT_Q
+  299  ytb -f 22 https://www.youtube.com/watch\?v\=7JBEQz1fSyQ
+  300  ytb -f 22 https://www.youtube.com/watch\?v\=JNa5MR9voCQ
+  301  ytb -f 22 https://www.youtube.com/watch\?v\=OwBCKJHCHEg
+  302  ytb -f 22 https://www.youtube.com/watch\?v\=dQPMyuW8VTQ
+  303  ytb -f 22 https://youtu.be/hHE1cJF3OZs
+  304  ytb -f 22 https://youtu.be/wIIGCTIpRMk
+  305  ytb -f 22 https://youtu.be/4nX5jwa2QTs
+  306  ls
+  307  lfcd
+  308  cd Courses
+  309  lfcd
+  310  mkd Philosophy
+  311  cd Philosophy
+  312  ytb -f 22 https://www.youtube.com/watch\?v\=1A_CAkYt3GY\&list\=PLq5rFUzhsrBXuE0wxECMeTYSV-_52fGt5
+  313  lfcd
+  314  ytb https://www.youtube.com/watch\?v\=BNYJQaZUDrI\&list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  315  b
+  316  mkd Statistics
+  317  ytb https://youtu.be/VPZD_aij8H0
+  318  ytb https://youtu.be/1tSqSMOyNFE
+  319  lfcd
+  320  ytb https://www.youtube.com/watch\?v\=BNYJQaZUDrI\&list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  321  alias ytb
+  322  ytb -i PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  323  ls
+  324  lfcd
+  325  ytb -U
+  326  p -Syu youtube-dl
+  327  ar
+  328  man ar
+  329  man youtube
+  330  man youtube-dlc
+  331  a
+  332  yta
+  333  alias
+  334  alias | grep "yt"
+  335  man youtube-dl
+  336  a
+  337  man gzip
+  338  man cgip
+  339  z nov
+  340  cd
+  341  cd Luke_Smith/Nov
+  342  ytb https://www.youtube.com/watch\?v\=ZFgCRKX8_f0
+  343  ythd https://www.youtube.com/watch\?v\=MYsk564hJ1U
+  344  a
+  345  ytb -F https://www.youtube.com/watch\?v\=MYsk564hJ1U
+  346  a
+  347  lfcd
+  348  cd Courses/Philosophy
+  349  ytb https://www.youtube.com/watch\?v\=BNYJQaZUDrI\&list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  350  ytb https://www.youtube.com/watch\?v\=1A_CAkYt3GY\&list\=PLq5rFUzhsrBXuE0wxECMeTYSV-_52fGt5
+  351  ls
+  352  b
+  353  mkd Linguistics
+  354  cd Linguistics
+  355  ytb https://www.youtube.com/watch\?v\=eDop3FDoUzk\&list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW
+  356  lfcd
+  357  a
+  358  ytb --yes-playlist  https://www.youtube.com/watch\?v\=eDop3FDoUzk\&list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW
+  359  ytb https://www.youtube.com/watch\?v\=eDop3FDoUzk\&list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW --yes-playlist
+  360  p -Syu youtube-dl
+  361  unzip -h
+  362  man unzip
+  363  7
+  364  cd "$(dirname "$(fzf)")"
+  365  ls "Downloading"
+  366  ls | grep -i "Downloading"
+  367  ls "Down"
+  368  ls "Downloading Videos, Music and More with Youtube DL ( 720 X 720 ).mp4"
+  369  ls -l "Downloading Videos, Music and More with Youtube DL ( 720 X 720 ).mp4"
+  370  ls -lh "Downloading Videos, Music and More with Youtube DL ( 720 X 720 ).mp4"
+  371  b
+  372  cd "$(dirname "$(fzf)")"
+  373  lsd Auto-ripping,_splitting_and_tagging_Albums_and_Audiobooks_from_YouTube_\(_1080_X_1080_\).mp4
+  374  ls -lh  Auto-ripping,_splitting_and_tagging_Albums_and_Audiobooks_from_YouTube_\(_1080_X_1080_\).mp4
+  375  mpv Auto-ripping,_splitting_and_tagging_Albums_and_Audiobooks_from_YouTube_\(_1080_X_1080_\).mp4
+  376  alias yt
+  377  ytb https://www.youtube.com/watch\?v\=9A-HLSvtBWc
+  378  sc-im Downloads/YouTube-Playlist.xls
+  379  cat Downloads/YouTube-Playlist.xls
+  380  cd Courses/Philosophy
+  381  ytb PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  382  ls
+  383  ls -a
+  384  b
+  385  cd Philosophy
+  386  ytb -f best PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  387  ytb -f best https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  388  ytb -f --yes-playlist https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR\t
+  389  youtube-dl "https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR"
+  390  youtube-dl --yes-playlist "https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR"
+  391  p -R youtube-dl
+  392  pip install youtube-dl
+  393  which youtube-dl 
+  394  youtube-dl https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  395  youtube-dl --yes-playlist "https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR"
+  396  pip uninstall youtube-dl
+  397  youtube-dlc
+  398  youtube-dlc https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  399  which youtube-dlc 
+  400  pip uninstall youtube-dlc
+  401  p -S youtube-dl
+  402  youtube-dl --yes-playlist "https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR"
+  403  ytb https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  404  lfcd
+  405  a
+  406  cd Courses/Linguistics
+  407  ls
+  408  lfcd
+  409  rn
+  410  yta https://youtu.be/eDop3FDoUzk\?list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW
+  411  rn
+  412  rm *
+  413  a
+  414  yt -f 22 --embed-thumbnail https://youtu.be/eDop3FDoUzk\?list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW
+  415  rn
+  416  rm *
+  417  ls
+  418  yt https://www.youtube.com/watch\?v\=eDop3FDoUzk\&list\=PL8dPuuaLjXtP5mp25nStsuDzk2blncJDW
+  419  zip config.h
+  420  ls
+  421  zip config.zip config.h
+  422  lfcd
+  423  zipinfo config.zip
+  424  man tar
+  425  info tar
+  426  file config.h.tar.gz
+  427  ytb https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  428  ls
+  429  lfcd
+  430  ytb https://www.youtube.com/playlist\?list\=PL8dPuuaLjXtNgK6MZucdYldNkMybYIHKR
+  431  cd Downloads/Yes_I_Know_It 
+  432  ni Quantum_Computing_Pre_Req.txt
+  433  pandoc Quantum_Computing_Pre_Req.txt -o Quantum_Computing_Pre_Req.pdf
+  434  lfcd
+  435  python 
+  436  bpython
+  437  python
+  438  cd Courses
+  439  mkd Quantum_Computing
+  440  cd Quantum_Computing
+  441  yt https://youtu.be/WVv5OAR4Nik
+  442  yt https://youtu.be/-pUOxVsxu3o
+  443  yt https://youtu.be/Xpk67YzOn5w
+  444  yt https://youtu.be/jiXuVIEg10Q
+  445  yt https://youtu.be/JhHMJCUmq28
+  446  yt https://youtu.be/CeuIop_j2bI
+  447  ls
+  448  cd Courses
+  449  mkd Organic_Chemistery
+  450  cd Organic_Chemistery
+  451  yt https://www.youtube.com/watch\?v\=bSMx0NS0XfY\&list\=PL8dPuuaLjXtONguuhLdVmq0HTKS0jksS4
+  452  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  453  ls
+  454  lfcd
+  455  rn
+  456  yt https://www.youtube.com/watch\?v\=zxHVpNnFt1U
+  457  yt https://www.youtube.com/watch\?v\=LvoLXE0U5og
+  458  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  459  mkd Week_1
+  460  mkd Week_2 Week_3
+  461  ls
+  462  ld
+  463  ls | grep -v "/"
+  464  ls
+  465  yt https://www.youtube.com/watch\?v\=Wa8xUJ1JhKQ
+  466  mkd Week_4 Week_5 Week_6 Week_7 Week_8
+  467  yt https://www.youtube.com/watch\?v\=txme9o0EdLk https://www.youtube.com/watch\?v\=VNo5WrKZ8Yc https://www.youtube.com/watch\?v\=ErO_Hy01X98
+  468  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  469  ni input.txt
+  470  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  471  yt -i input.txt
+  472  man youtube-dl
+  473  yt --batch-file input.txt
+  474  cd Courses
+  475  dust
+  476  yt --batch-file input.txt
+  477  ls 
+  478  ls  | rg "/"
+  479  ls  | rg -i  "/"
+  480  lfcd
+  481  man st
+  482  st lfcd
+  483  ls  | rg -i  "/"
+  484  cheat grep
+  485  ls | grep "/"
+  486  ld
+  487  ls -d
+  488  ls -da
+  489  ls -d *
+  490  ls -d */
+  491  sh
+  492  ls
+  493  cd Courses
+  494  pwd
+  495  ls -d */
+  496  ls -d */
+  497  a
+  498  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  499  ld
+  500  a
+  501  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  502  ld
+  503  lsd
+  504  a
+  505  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  506  ls -d */
+  507  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  508  ld
+  509  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  510  ld
+  511  ls
+  512  ld
+  513  cd dotfiles
+  514  git status
+  515  cd .config/
+  516  ls
+  517  lsa
+  518  ln -s ~/.config/aliasrc ./aliasrc
+  519  ls
+  520  ni aliasrc
+  521  b
+  522  git status
+  523  git add .
+  524  git commit -m "few changes"
+  525  git push git@gitlab.com:He_Love_To_Code/dotfiles.git master
+  526  yt https://www.youtube.com/watch\?v\=LvoLXE0U5og
+  527  ls
+  528  rm Verbs\ and\ nouns\ in\ Julia\ _\ Week\ 5\ _\ 18.S191\ MIT\ Fall\ 2020-LvoLXE0U5og.f137.mp4.part
+  529  ls
+  530  lfcd
+  531  cd Downloads
+  532  pandoc How\ To\ Protect\ Your\ Company\ In\ The\ Quantum\ Computing\ Age\ _\ Hacker\ Noon\ \(11_21_2020\ 5_46_40\ PM\).html -o outqu.pdf
+  533  mkd Wallpaper_Nov
+  534  mv *.jpg ./Wallpaper_Nov
+  535  ls
+  536  lfcd
+  537  ls
+  538  dust
+  539  cd Courses/Introduction_To_Computational_Thinking_With_Julia
+  540  ls
+  541  yt --batch-file input.txt
