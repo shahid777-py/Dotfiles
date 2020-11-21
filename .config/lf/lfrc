@@ -26,20 +26,17 @@ $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 #     esac
 # }}
 
-cmd lfc  ${{
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
-}}
-
+cmd on-cd &{{
+               # display git repository status in your prompt
+               # source /usr/share/git/completion/git-prompt.sh
+               # GIT_PS1_SHOWDIRTYSTATE=auto
+               # GIT_PS1_SHOWSTASHSTATE=auto
+               # GIT_PS1_SHOWUNTRACKEDFILES=auto
+               # GIT_PS1_SHOWUPSTREAM=auto
+               # git=$(__git_ps1 " (%s)") || true
+               fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%w\033[0m\033[1m%f$git\033[0m"
+               lf -remote "send $id set promptfmt \"$fmt\""
+           }}
 
 # Custom Functions
 cmd open ${{
@@ -153,15 +150,30 @@ cmd trash ${{
   done
 }}
 
+cmd cd_drives ${{
+
+	DIR=$(mount | grep "/dev/sda1" | cut -d" " -f 3);
+	cd $DIR
+
+
+}}
+
 cmd clear_trash %trash-empty
 
 cmd restore_trash ${{
   trash-restore
 }}
 
+
+
+
+
+
 cmd stripspace %stripspace "$f"
-cmd lfcd $pwd ; lf $pwd
-# Bindings
+
+
+
+
 # Remove some defaults
 map m
 map o
@@ -176,7 +188,8 @@ map f
 # File Openers
 map ee $$EDITOR "$f"
 # map i $view "$f"
-# map q $$lfc
+# map q %pwd  $cd
+
 # Archive Mappings
 map az zip
 map at tar
@@ -204,6 +217,8 @@ map . set hidden!
 map D delete
 map p paste
 map x cut
+map X unarchive
+map z zip
 map y copy
 map <enter> open
 map mf mkfile
@@ -234,14 +249,13 @@ map gm cd ~/Entertainment/Movies
 map g2 cd ~/2020
 map ga cd ~/Courses/Bash/Linux Bash Shell Scripting Complete Guide (incl. AWK  SED)/8. AWK
 map gl cd /home/shahid/Luke_Smith
-map gM cd ~/Entertainment/Comedy_Movies
 map ga cd ~/Entertainment/Animes/
 map g4 cd ~/4Mins_Book
 map gs cd ~/Screen_Cast
 map gc cd ~/Cheatsheets
 map gC cd ~/Courses
 map go cd ~/Others_config
-map q lfcd
+
 
 map gL cd ~/Lex_fridman
 map gy cd ~/Videos/Islamic/Yasir_qadi
@@ -259,6 +273,8 @@ map gD cd ~/.config/
 map gn cd ~/.config/nvim
 map ; mark-save
 # map ' mark-load
+map gM cd /run/media/shahid
+
 
 map bg  $setbg "$f"
 map bw  $wal -i %f && setbg %f

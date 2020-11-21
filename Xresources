@@ -94,7 +94,7 @@ dwm.color2: #1d1100 	 		/* norm bg color
 ! dwm.color2: #292d3e
 			     /* norm bg color */
 dwm.color3: #FAFAFA	     /* norm fg color */
-dwm.color5: 	#1a292d
+dwm.color5: 	#3E3E89
 /* dwm.color5: 	#204050 */
 /* dwm.color5: #885f5f /1* sel bg color *1/ */
 
