@@ -1,7 +1,11 @@
-# super + e
+#l super + e
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+alt  + u
+	wal -i ~/backgrounds/Wallpaper_Nov/84247.jpg && setbg  ~/backgrounds/Wallpaper_Nov/84247.jpg 
+super + shift + u
+	wal --theme ~/colors2.json
 super + u
 	wal --theme ~/colors.json
 super + Print
@@ -9,7 +13,8 @@ super + Print
 alt + p
 	pauseall_mpv.sh
 alt + space 
-	xset r rate 300 50 && setxkbmap -option caps:escape
+	xset r rate 300 50 && setxkbmap -option caps:escape ; setxkbmap -option print:print
+
 alt + b
 	pidof picom && pkill picom || picom -b
 
@@ -115,7 +120,7 @@ alt + shift + w
 # alt + p
 # 	pidof polybar && pkill polybar || pb
 alt + shift + p
-	pkill polybar
+	notify-send "📔Pluto opening" && julia ~/.local/bin/pluto_notebook.jl
 alt + m
 	cmop
 alt + shift + m
@@ -142,6 +147,9 @@ super + shift + p
 	pcmanfm
 alt + shift + n
 	nm.sh
+alt + n
+	killall redshift;sleep 3;redshift -l 13.10:80.28 -t 4880:4990 -g 1.000 && notify-send " Night Mode ON"
+
 alt + m
 	cmop
 alt + shift + m

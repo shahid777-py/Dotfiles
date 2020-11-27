@@ -13,7 +13,12 @@ call vundle#begin()
 call plug#begin('~/.config/nvim/plugged')
 
   " Working with tags
+Plug 'keith/swift.vim'
+" Plug 'scrooloose/syntastic'
+" Plug 'arzg/vim-colors-xcode'
+" Plug 'arzg/vim-swift'
 Plug 'tpope/vim-surround'
+Plug 'JuliaEditorSupport/julia-vim'
 Plug 'dpelle/vim-LanguageTool'
 Plug 'robertbasic/vim-hugo-helper'
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -202,12 +207,12 @@ call vundle#end()
 	let g:rehash256 = 1
 	set t_Co=256
 " Hide Statusline
-	set noshowmode
+	" set noshowmode
 " disables statusline
-	" set laststatus=0
+	set laststatus=0
 	 " source ~/.config/nvim/statusline.vim    " patch to statusline config
 " Enable's statusline
-	set laststatus=2
+	" set laststatus=2
 " to get rid of display of last command
 	" set noshowcmd
 " to get rid of the file name displayed in the command line bar
@@ -393,7 +398,7 @@ call vundle#end()
 	" vmap <silent><leader>f  <Plug>(coc-format-selected)<cr>
 	" nmap <silent><leader>f  <Plug>(coc-format-Document)<cr>
 	" nnoremap <leader>f: CocCommand prettier.formatFile <CR><cr>
-	" nmap <silent><leader>f :!black  % <cr><cr>
+	nmap <silent><leader>f :!black  % <cr>
 
 " To save without formatting, use
 " 	:noa w
@@ -551,11 +556,11 @@ let g:lightline.colorscheme = 'gruvbox'
 	" nnoremap <silent><A-t> :hi Normal ctermbg=NONE guibg=NONE<CR>
 
 	" nnoremap <silent><C-t> :call ToggleAlpha()<cr>
-	nnoremap <C-t> : call ToggleColor()<cr>
+	nnoremap <silent> <C-t> : call ToggleColor()<cr>
 
 
 source $HOME/.config/nvim/my_snippets.vim
-
+" nnoremap <C-S>t : colorscheme xcodedarkhc <cr>
 
 noremap Q :noautocmd qall!<CR>
 

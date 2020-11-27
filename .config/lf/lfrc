@@ -218,7 +218,7 @@ map D delete
 map p paste
 map x cut
 map X unarchive
-map z zip
+map Z zip
 map y copy
 map <enter> open
 map mf mkfile

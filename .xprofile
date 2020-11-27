@@ -6,7 +6,6 @@
 WINIT_X11_SCALE_FACTOR=1
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS &
 systemctl --user set-environment DISPLAY=:0 &
-xbacklight -set 15 &
 xwallpaper --zoom ~/.config/wall.png &
 # pidof i3lock || xautolock -time 05 -locker mylock.sh &
 remaps &	# Remap caps key esc & speedy keys
@@ -25,7 +24,8 @@ transmission-daemon &
 # nm.sh &
 redshift &
 export _JAVA_AWT_WM_NONREPARENTING=1 &
-history >> ~/dotfiles/history.txt &
+light -S 15 &
+ 
 # autochangewall.sh &
 # restore_alsa() {
 #  while [ -z "$(pidof pulseaudio)" ]; do

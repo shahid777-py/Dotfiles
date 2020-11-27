@@ -65,7 +65,7 @@ Xft.lcdfilter: lcddefault
 /* *color15:                         #ebdbb2 */
 /* *color16:			  #ac2b1a */
 /* *color256: 			  #1d2021 */
-/* *color257: 			  #ebdbb2 */
+*color257: 			  #ebdbb2
 
 *fading:                          8
 !*fadeColor:                       black
@@ -85,7 +85,7 @@ Xft.lcdfilter: lcddefault
 /* *.background: #1d1f21 	 /1* Nice Dark 2 *1/ */
 /* *.background: 	#1a292d */
 /* *.foreground: #ebdbb2 */
-
+/* color1:#717B84 */
  /* DWM */
 /* dwm.color0:#444444 	     /* normborder color */
 dwm.color1: #770000         /* selbordercolor */
@@ -93,8 +93,9 @@ dwm.color1: #770000         /* selbordercolor */
 dwm.color2: #1d1100 	 		/* norm bg color
 ! dwm.color2: #292d3e
 			     /* norm bg color */
+/* dwm.color5: 	#3E3E89 */
 dwm.color3: #FAFAFA	     /* norm fg color */
-dwm.color5: 	#3E3E89
+dwm.color4: #FAFAFA	
 /* dwm.color5: 	#204050 */
 /* dwm.color5: #885f5f /1* sel bg color *1/ */
 

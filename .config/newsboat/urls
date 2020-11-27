@@ -10,7 +10,6 @@ https://www.vox.com/rss/front-page/index.xml "~Vox(News)"
 https://theislamicinformation.com/feed/ "~The Islamic Information"
 https://muslimmatters.org/feed/ "~Muslim Matters"
 https://www.edn.com/feed "~EDN"
-
 "---Code(News)---"
 https://realpython.com/atom.xml "~Real Python"
 https://hackernoon.com/feed
@@ -63,6 +62,7 @@ https://nitter.net/TalebQuotes/rss "~Taleb Qoutes"
 https://nitter.net/nntaleb/rss "~Nicholas Taleb"
 
 "---Videos---"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCRtiU-lpcBSi-ipFKyfIkug
 https://www.youtube.com/feeds/videos.xml?channel_id=UCeccrNGLzk6d0M_vaomD3LQ "~Smile 2 Jannah"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCQHRLH8RQIrdGWMhf5heWiA "~OnePath Network"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCKGeFv3Gaho3bD4-hoUx4eg "~Naseeha Session"
