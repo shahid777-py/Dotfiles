@@ -2,8 +2,17 @@
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+super + n
+	$TERMINAL -e nvim -c VimwikiIndex
+super + shift + n
+	$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
+super + v 
+	$TERMINAL -e ncmpcpp
+
 alt  + u
-	wal -i ~/backgrounds/Wallpaper_Nov/84247.jpg && setbg  ~/backgrounds/Wallpaper_Nov/84247.jpg 
+	wal --theme ~/colors_gruvbox.json
+alt + shift + u
+	wal --theme ~/colors_nord.json
 super + shift + u
 	wal --theme ~/colors2.json
 super + u
@@ -15,13 +24,13 @@ alt + p
 alt + space 
 	xset r rate 300 50 && setxkbmap -option caps:escape ; setxkbmap -option print:print
 
-alt + b
-	pidof picom && pkill picom || picom -b
+# alt + b
+# 	pidof picom && pkill picom || picom -b
 
 alt + t
-	st -e transmission-remote-cli
+	$TERMINAL -e transmission-remote-cli
 super + v
-	st -e ncmpcpp
+	$TERMINAL -e ncmpcpp
 alt + 9
 	stop_Recording && notify-send "Stopped"
 # alt + j
@@ -29,11 +38,12 @@ alt + 9
 alt + 0
 	notify-send "🎥 Rec Started" && screen_cast
 super + ctrl + m
-	st -e alsamixer
+	$TERMINAL -e alsamixer
 # super + u
 # 	$TERMINAL -e "nmtui-connect"
 alt + Return
-	alacritty
+			$TERMINAL -e  "tmux_check"
+alt + shift + Return 
 alt + h
 	op_swap.sh
 # alt + p
@@ -43,8 +53,8 @@ alt + h
 # 	lockscreen
 super + e
 	$TERMINAL -e "rn"
-super + d
-	dmenu_run -p "Apps" -fn "mono-12"
+# super + d
+# 	dmenu_run -p "Apps" -fn "mono-12"
 super + shift + m
 	dmenumount
 super + shift + u
@@ -135,6 +145,8 @@ alt + e
 	zathura ~/Books/Books/Computer_science_books/Languages/Python/automatetheboringstuffwithpython_new.pdf
 alt + shift + l
 	wiki-local-pages
+super + r
+		$TERMINAL -e  zsh -i -c 'lfcd'
 
 super + Return
 	$TERMINAL
@@ -148,7 +160,7 @@ super + shift + p
 alt + shift + n
 	nm.sh
 alt + n
-	killall redshift;sleep 3;redshift -l 13.10:80.28 -t 4880:4990 -g 1.000 && notify-send " Night Mode ON"
+	killall redshift;sleep 3;redshift -l 13.10:80.28 -t 5333:4888 -g 1.000 && notify-send " Night Mode ON"
 
 alt + m
 	cmop
@@ -175,10 +187,10 @@ super + shift + p
 # 	pkill screenkey
 super + w
 	brave
-# super + Tab
-# 	 rofi -show drun -theme dmenu
+super + d
+	 rofi -show drun 
 super + g
-	st -e gotop
+	$TERMINAL -e gotop
 super + BackSpace
 	prompt "Reboot Computer ?" "reboot"
 super + shift + b

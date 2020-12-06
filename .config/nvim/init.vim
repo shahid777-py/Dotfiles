@@ -1,5 +1,6 @@
 let mapleader =","
 
+
 if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 echo "Downloading junegunn/vim-plug to manage plugins..."
 silent !mkdir -p ~/.config/nvim/autoload/
@@ -11,22 +12,40 @@ endif
 set rtp+=~/.config/nvim/bundle/Vundle.vim
 call vundle#begin()
 call plug#begin('~/.config/nvim/plugged')
-
+Plug 'sainnhe/gruvbox-material'
+Plug 'fratajczak/one-monokai-vim'
+Plug 'patstockwell/vim-monokai-tasty'
+Plug 'crusoexia/vim-monokai'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'sheerun/vim-polyglot'
+Plug 'sainnhe/sonokai'
+Plug 'sainnhe/edge'
+Plug 'sainnhe/forest-night'
+" '' Erlang Runtime
+" Plug 'machakann/vim-highlightedyank'
+Plug 'chriskempson/base16-vim'
+Plug 'vim-crystal/vim-crystal'
+Plug 'chriskempson/base16-vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'arcticicestudio/nord-vim'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'lifepillar/vim-solarized8'
+" Plug 'vim-erlang/vim-erlang-runtime'
   " Working with tags
 Plug 'keith/swift.vim'
 " Plug 'scrooloose/syntastic'
 " Plug 'arzg/vim-colors-xcode'
 " Plug 'arzg/vim-swift'
 Plug 'tpope/vim-surround'
-Plug 'JuliaEditorSupport/julia-vim'
+" Plug 'JuliaEditorSupport/julia-vim'
 Plug 'dpelle/vim-LanguageTool'
-Plug 'robertbasic/vim-hugo-helper'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'jacoborus/tender.vim'
 " Plug 'tmhedberg/SimpylFold'
 " Nerd Icons
-Plug 'ryanoasis/vim-devicons'
+" Plug 'ryanoasis/vim-devicons'
 " Auto Completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Markdwon
@@ -35,7 +54,6 @@ Plug 'junegunn/goyo.vim'
 " Plug 'junegunn/limelight.vim'
 "File Type Bases Syntax
 Plug 'morhetz/gruvbox'
-Plug 'dracula/vim'
 Plug 'srcery-colors/srcery-vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'vim-python/python-syntax'                    " Python highlighting
@@ -56,7 +74,8 @@ Plug 'ap/vim-css-color'
 "Go
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 " Pairs
-Plugin 'auto-pairs-gentle'
+
+" Plugin 'auto-pairs-gentle'
 Plug 'alvan/vim-closetag'
 Plug 'dkarter/bullets.vim'
 " Plug 'rstacruz/vim-hyperstyle'
@@ -111,13 +130,6 @@ call vundle#end()
 	 "       \}
 
 
-" Blurred Statusline
-	" let g:lightline.separator = {
-	" 	\   'left': '█▓▒░', 'right': '░▒▓'
-	"   \}
-	" let g:lightline.subseparator = {
-	" 	\   'left': '▓▒░', 'right': '|'
-	"   \}
 
 
 	" set showtabline=2  " Show tabline
@@ -206,7 +218,7 @@ call vundle#end()
 	set wildmode=longest,list,full
 	let g:rehash256 = 1
 	set t_Co=256
-" Hide Statusline
+" Hide Statusline INSERT
 	" set noshowmode
 " disables statusline
 	set laststatus=0
@@ -214,7 +226,7 @@ call vundle#end()
 " Enable's statusline
 	" set laststatus=2
 " to get rid of display of last command
-	" set noshowcmd
+	set noshowcmd
 " to get rid of the file name displayed in the command line bar
 	" set shortmess+=F
 " Shows Tabline on top
@@ -480,61 +492,123 @@ nnoremap <silent> <C-f> :Files<CR>
 nnoremap <C-]> :call AutoPairsJump()<CR>
 
 
-" Transparency Function
 
-let s:alpha = 1
-function! ToggleAlpha()
-	if s:alpha == 0
-		hi Normal ctermbg=NONE guibg=NONE
-		let s:alpha = 1
-		silent! !picom -b
-
-	else
-		" colorscheme plastic
-		silent! !pkill picom
-		let s:alpha = 0
-
-	endif
-endfunction
 
 "Colorscheme Swithcer Function
 let s:color = 1       "Gruvbox Activated"
 function! ToggleColor()
 	if s:color == 1
-		" hi Normal ctermbg=NONE guibg=NONE
-		set notermguicolors
-		colorscheme default
-		set bg=light
+		set termguicolors
+		let g:gruvbox_material_background = 'soft'
+    let g:gruvbox_material_enable_italic = 1
+    let g:gruvbox_material_disable_italic_comment = 1
+		let g:gruvbox_material_transparent_background = 1
+		colorscheme gruvbox-material
+		hi Normal ctermbg=NONE guibg=NONE
 		let s:color = 0
 		let g:lightline = {}
-		let g:lightline.colorscheme = 'tender'
+		let g:lightline.colorscheme = 'gruvbox-material'
+		set laststatus=0
+	else
+		set bg=dark
+		" hi Normal ctermbg=NONE guibg=NONE
+		" set notermguicolors
+		" colorscheme default
+		set termguicolors
+		colorscheme edge
+		set bg=dark
+		let s:color = 1
+		let g:lightline = {}
+		let g:lightline.colorscheme = 'dracula'
+		" let g:lightline.colorscheme = 'tender'
+
+	endif
+endfunction
+
+let s:nord = 1       "Gruvbox Activated"
+function! ToggleNord()
+	if s:nord == 1
+		set bg=dark
+		colorscheme nord
+		" hi Normal ctermbg=NONE guibg=NONE
+		let s:nord = 0
+		" set laststatus=2
+		" let g:lightline = {}
+		" let g:lightline.colorscheme = 'nord'
+
+
 	else
 		set bg=dark
 		set termguicolors
-		colorscheme gruvbox
+		colorscheme nord
 		hi Normal ctermbg=NONE guibg=NONE
-		let g:lightline = {}
-		let g:lightline.colorscheme = 'gruvbox'
-		let s:color = 1
+		let s:nord = 1
+		" let g:lightline = {}
+		" let g:lightline.colorscheme = 'tender'
+		set laststatus=0
+		
+
+
 	endif
 endfunction
+
+let s:edge_on = 1 " If Edge = Colorscheme
+function! Toggle_Edge()
+    if s:edge_on == 1
+				let g:edge_transparent_background = 0 " Turn Off Alpha for Edge
+				colorscheme edge
+        let s:edge_on = 0
+		elseif s:edge_on == 0 " Check Edge is Transparent
+				let g:edge_transparent_background = 1 " Turn ON Alpha for Edge
+				colorscheme edge
+        let s:edge_on = 1
+    endif
+endfunction
+
+
+let s:on = 0
+function! Toggle_Gruvbox()
+	if s:on == 0
+		let g:gruvbox_material_transparent_background = 0
+		colorscheme gruvbox-material
+		let s:on = 1 " Gruvbox-Material ON
+	elseif s:on == 1 
+				let g:gruvbox_material_transparent_background = 1 " Turn ON Alpha for Gruvbox-Material
+				colorscheme gruvbox-material
+				let s:on = 0
+	endif
+endfunction
+
+
+
+
+
+let s:bar = 0
+function! ToggleBar()
+	if s:bar == 0
+		set noshowmode 
+		set laststatus=2
+		let s:bar = 1
+	else
+		set laststatus=0
+		" set noshowmode 
+		let s:bar = 0
+	endif
+endfunction
+
 
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox'
+let g:lightline.colorscheme = 'dracula'
 
   " vim fzf
 	" nnoremap <A-g> :GFiles<CR>
 	" nnoremap <A-z> :Files<CR>
 
 	" let g:lightline = {
-	"       \ 'colorscheme': 'nord',
-	" "       \ }
-
-	" let g:lightline = {
-	"       \ 'colorscheme': 'srcery',
+	"       \ 'colorscheme': 'tender', 
 	"       \ }
 	" autocmd BufWritePost,TextChanged,TextChangedI * call lightline#update()
 " " Powerline Lightline
@@ -548,15 +622,13 @@ let g:lightline.colorscheme = 'gruvbox'
 	" set bg=light
 	set bg=dark
 	set termguicolors
-	colorscheme gruvbox
 	" " let g:deus_termcolors=256
 	hi Normal ctermbg=NONE guibg=NONE
 	" hi NonText ctermbg=NONE guibg=NONE
 	" nnoremap <M-n> :colorscheme gruvbox<CR>
 	" nnoremap <silent><A-t> :hi Normal ctermbg=NONE guibg=NONE<CR>
 
-	" nnoremap <silent><C-t> :call ToggleAlpha()<cr>
-	nnoremap <silent> <C-t> : call ToggleColor()<cr>
+	" nnoremap <silent><C-t> :call ToggleColor()<cr>
 
 
 source $HOME/.config/nvim/my_snippets.vim
@@ -569,3 +641,50 @@ au BufRead,BufNewFile *urls set filetype=sh
 
 " map <C-K> :pyf <path-to-this-file>/clang-format.py<cr>
 " imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
+
+
+" let g:lsc_auto_map = v:true
+let dart_html_in_string=v:true
+let g:dart_style_guide = 2
+" let g:dart_format_on_save = 1
+" let g:solarized_termcolors=256
+nnoremap <silent><C-n> : call ToggleNord()<cr>
+
+" Blurred Statusline
+	let g:lightline.separator = {
+		\   'left': '█▓▒░', 'right': '░▒▓'
+	  \}
+	let g:lightline.subseparator = {
+		\   'left': '▓▒░', 'right': '|'
+	  \}
+
+
+nnoremap <silent><c-l> : call ToggleBar() <cr>
+nnoremap <silent><C-g> : call Toggle_Gruvbox() <CR>
+nnoremap <silent><c-e> : call Toggle_Edge() <CR>
+
+
+" Python Syntax overrides for Nord 
+augroup nord-theme-overrides
+	autocmd!
+  " Use 'nord7' as foreground color for Vim comment titles.
+  autocmd ColorScheme nord highlight pythonAttribute ctermfg=14 guifg=#8FBCBB
+augroup END
+
+	nnoremap <silent><c-m> : colorscheme one-monokai <cr><cr>
+
+
+
+" The configuration options should be placed before `colorscheme edge`.
+        let g:edge_style = 'neon'
+        let g:edge_enable_italic = 1
+        let g:edge_disable_italic_comment = 1
+				let g:edge_transparent_background = 1
+				let g:edge_menu_selection_background = 'purple'
+				let g:edge_diagnostic_line_highlight = 1
+				let g:edge_current_word = 'bold'
+				colorscheme edge
+		let g:gruvbox_material_background = 'hard'
+    let g:gruvbox_material_enable_italic = 1
+    let g:gruvbox_material_disable_italic_comment = 1
+		" let g:gruvbox_material_transparent_background = 1

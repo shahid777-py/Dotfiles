@@ -3,7 +3,7 @@
   "python.linting.pylintEnabled": true,
   "python.formatting.provider": "pep8",
   "python.pythonPath": "/home/shahid/anaconda3/bin/python",
-  //  "coc.preferences.formatOnSaveFiletypes": ["html", "css", "json", "python"],
+  "coc.preferences.formatOnSaveFiletypes": ["html", "css", "json"],
   "languageserver": {
     "golang": {
       "command": "~/.local/share/go/bin/gopls",
@@ -14,10 +14,26 @@
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
-  "explorer.keyMappings": {
+  "explorer.keyMappings.global": {
     "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit",
     "s": "open:split",
     "T": "open:tabe"
+  },
+  "languageserver": {
+    "haskell": {
+      "command": "hie-wrapper",
+      "args": ["--lsp"],
+      "rootPatterns": [
+        "*.cabal",
+        "stack.yaml",
+        "cabal.project",
+        "package.yaml"
+      ],
+      "filetypes": ["hs", "lhs", "haskell"],
+      "initializationOptions": {
+        "haskell": {}
+      }
+    }
   }
 }

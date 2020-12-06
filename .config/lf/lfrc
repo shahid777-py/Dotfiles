@@ -272,6 +272,7 @@ map gd cd ~/Downloads
 map gD cd ~/.config/
 map gn cd ~/.config/nvim
 map ; mark-save
+map S $$SHEL
 # map ' mark-load
 map gM cd /run/media/shahid
 

@@ -7,15 +7,15 @@
 
 ! *.font: Inconsolata for Powerline:size=14
 /* st.font: Mononoki Nerd Font:size=16 */
-/* st.font:Monaco:size=16 */
-/* st.font:SF Mono:style=Medium:size=16 */
+/* st.font:VictorMono Nerd Font :size=16 */
+/* st.font:JetBrains Mono:size=16 */
 
-/* st.font:Consolas for Powerline FixedD:size=18 */
+/* st.font:Source Code Pro:size=16 */
 /* st.font: */
 /* st.font: */
 /* st.font: */
 /* st.font: */
-/* *.font:	Liberation Mono:pixelsize=18:antialias=true:autohint=true; */
+/* *st.font:VictorMono Nerd Font Mono:size=16 */
 
 
 Xft.dpi:       96
@@ -76,7 +76,6 @@ Xft.lcdfilter: lcddefault
 * Xcursor.size:                     0
 
 /* *cursorColor:darkorange */
-*cursorColor:#96b5b4
 
 
 
@@ -88,95 +87,96 @@ Xft.lcdfilter: lcddefault
 /* color1:#717B84 */
  /* DWM */
 /* dwm.color0:#444444 	     /* normborder color */
-dwm.color1: #770000         /* selbordercolor */
+/* dwm.color1: #770000         /1* selbordercolor *1/ */
+
+dwm.color1: #9257aa
+
+/* dwm.color5: #BD93F9 */
+dwm.color5: #9257aa
+/* dwm.color4:  #1d1100 */ 
+dwm.color4:  #FAFAFA
 ! dwm.color2: #282818	     /* norm bg color */
-dwm.color2: #1d1100 	 		/* norm bg color
+dwm.color3: #FAFAFA 	 		/* norm bg color
 ! dwm.color2: #292d3e
 			     /* norm bg color */
 /* dwm.color5: 	#3E3E89 */
-dwm.color3: #FAFAFA	     /* norm fg color */
-dwm.color4: #FAFAFA	
-/* dwm.color5: 	#204050 */
-/* dwm.color5: #885f5f /1* sel bg color *1/ */
+/* dwm.color2: #282A36     /1* norm fg color *1/ */
+dwm.color2: #0e1021
+ 		
 
-/* dwm.color5: #5D7C8A */
 
- /* sel bg color */
-/* dwm.color5: 	#907151 */
-/* dwm.color5: #9E6432 */
+! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
+! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
-/* dwm.color5:#6b8c21 */
-/* dwm.color5: #d7d7d7 */
-/* dwm.color5:#7c6f64 */
-/* dwm.color5: #9582C0 */
-/* dwm.color4: #000000 */
-/* dwm.color5: #54487A */
-/* dwm.color4: #FAFAFA */
+! Project:    Nord XResources
+! Version:    0.1.0
+! Repository: https://github.com/arcticicestudio/nord-xresources
+! License:    MIT
+
+/* dwm.color1:#1d1100  */
 
 
 
+/* #define nord0 #2E3440 */
+/* #define nord1 #3B4252 */
+/* #define nord2 #434C5E */
+/* #define nord3 #4C566A */
+/* #define nord4 #D8DEE9 */
+/* #define nord5 #E5E9F0 */
+/* #define nord6 #ECEFF4 */
+/* #define nord7 #8FBCBB */
+/* #define nord8 #88C0D0 */
+/* #define nord9 #81A1C1 */
+/* #define nord10 #5E81AC */
+/* #define nord11 #BF616A */
+/* #define nord12 #D08770 */
+/* #define nord13 #EBCB8B */
+/* #define nord14 #A3BE8C */
+/* #define nord15 #B48EAD */
 
-/* *.background: #0B090E */
-/* *.background: #ebdbb2 */
-/* *.color257: #ebdbb2 */
+/* *.foreground:   nord4 */
+/* *.background:   nord0 */
+/* *.cursorColor:  nord4 */
+/* /1* *fading: 35 *1/ */
+/* *fadeColor: nord3 */
+
+/* *.color0: nord1 */
+/* *.color1: nord11 */
+/* *.color2: nord14 */
+/* *.color3: nord13 */
+/* *.color4: nord9 */
+/* *.color5: nord15 */
+/* *.color6: nord8 */
+/* *.color7: nord5 */
+/* *.color8: nord3 */
+/* *.color9: nord11 */
+/* *.color10: nord14 */
+/* *.color11: nord13 */
+/* *.color12: nord9 */
+/* *.color13: nord15 */
+/* *.color14: nord7 */
+/* *.color15: nord6 */
 
 
-/* !! gruvbox light: */
-/* *.color0: #fbf1c7 */
-/* *.color1: #cc241d */
-/* *.color2: #98971a */
-/* *.color3: #d79921 */
-/* *.color4: #458588 */
-/* *.color5: #b16286 */
-/* *.color6: #689d6a */
-/* *.color7: #7c6f64 */
-/* *.color8: #928374 */
-/* *.color9: #9d0006 */
-/* *.color10: #79740e */
-/* *.color11: #b57614 */
-/* *.color12: #076678 */
-/* *.color13: #8f3f71 */
-/* *.color14: #427b58 */
-/* *.color15: #3c3836 */
-/* *.background: #fbf1c7 */
-/* *.foreground: #282828 */
-/* st.alpha: 0.9 */
 
-/* *.color0: #32302f */
-/* *.color1: #cc241d */
-/* *.color2: #a9b665 */
-/* *.color3: #d8a657 */
-/* *.color4: #7daea3 */
-/* *.color5: #d3869b */
-/* *.color6: #89b482 */
-/* *.color7: #d4be98 */
-/* *.color8: #928374 */
-/* *.color9: #ea6962 */
-/* *.color10: #a9b665 */
-/* *.color11: #d8a657 */
-/* *.color12: #7daea3 */
-/* *.color13: #d3869b */
-/* *.color14: #89b482 */
-/* *.color15: #ddc7a1 */
-/*  *.foreground:   #d4be98 */
+! Dracula Xresources palette
+*.foreground: #F8F8F2
+*.background: #282A36
+*.color0:     #000000
+*.color8:     #4D4D4D
+*.color1:     #FF5555
+*.color9:     #FF6E67
+*.color2:     #50FA7B
+*.color10:    #5AF78E
+*.color3:     #F1FA8C
+*.color11:    #F4F99D
+*.color4:     #BD93F9
+*.color12:    #CAA9FA
+*.color5:     #FF79C6
+*.color13:    #FF92D0
+*.color6:     #8BE9FD
+*.color14:    #9AEDFE
+*.color7:     #BFBFBF
+*.color15:    #E6E6E6
 
-/* *.background:   #060C15 */
-
-/* *.cursorColor:  #d4be98 */
-
-/* *.color0: #19100e */
-/* *.color1: #DE5519 */
-/* *.color2: #9D7255 */
-/* *.color3: #CE784E */
-/* *.color4: #F99B31 */
-/* *.color5: #FED32F */
-/* *.color6: #8C8B72 */
-/* *.color7: #cabcac */
-/* *.color8: #8d8378 */
-/* *.color9: #DE5519 */
-/* *.color10:#9D7255 */
-/* *.color11:#CE784E */
-/* *.color12:#F99B31 */
-/* *.color13:#FED32F */
-/* *.color14:#8C8B72 */
-/* *.color15:#cabcac */
+*.cursorColor:  #CAA9FA

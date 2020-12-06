@@ -10,25 +10,18 @@ https://www.vox.com/rss/front-page/index.xml "~Vox(News)"
 https://theislamicinformation.com/feed/ "~The Islamic Information"
 https://muslimmatters.org/feed/ "~Muslim Matters"
 https://www.edn.com/feed "~EDN"
+https://www.wired.com/feed/rss 
 "---Code(News)---"
+https://serokell.io/blog.rss.xml
+https://ruslanspivak.com/feeds/all.atom.xml "~Ruslan's Blog"
 https://realpython.com/atom.xml "~Real Python"
-https://hackernoon.com/feed
-https://itsfoss.com/feed/ "~Its Foss"
-https://itsfoss.com/category/fun/feed/ "~Fun(Its Foss)"
 https://itsfoss.com/category/programming/feed/ "~Programming(Its Foss)"
-https://linoxide.com/comments/feed/
 https://itsfoss.com/category/terminal-tricks/feed "~Terminal(Its Foss)"
-https://www.cyberciti.biz/atom/atom.xml "~NixCraft Feed"
-https://hirinfotech.com/feed/ "Web Scraping"
 https://flaviocopes.com/index.xml "~Flavico"
-https://www.infoworld.com/blog/infoworld-tech-watch/index.rss "~Info World"
 https://www.thepoorcoder.com/rss/ "~The Poor Coder"
 "---NDTV---"
-https://flipboard.com/@HuffPostIndia.rss "~HuffPostIndia"
 https://feeds.feedburner.com/ndtvnews-top-stories "~Top Stories"
 https://feeds.feedburner.com/ndtvnews-india-news "~India"
-https://feeds.feedburner.com/ndtvnews-world-news "~World News"
-https://feeds.feedburner.com/gadgets360-latest "~Gadget 360"
 https://feeds.feedburner.com/ndtvnews-south "~South India"
 
 
@@ -59,7 +52,6 @@ https://www.reddit.com/r/Piracy/new.rss reddit content "~Piracy"
 https://nitter.net/dontusethiscode/rss "~James Powell"
 https://nitter.net/thefaceberg/rss "~Faceberg"
 https://nitter.net/TalebQuotes/rss "~Taleb Qoutes"
-https://nitter.net/nntaleb/rss "~Nicholas Taleb"
 
 "---Videos---"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCRtiU-lpcBSi-ipFKyfIkug
@@ -75,3 +67,4 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC8XKyvQ5Ne_bvYbgv8LaIeg "~C
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmGSJVG3mCRXVOP4yZrU1Dw "~Johny Harris(Youtube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCtUId5WFnN82GdDy7DgaQ7w "~Better Ideas(youtube)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC4QZ_LsYcvcq7qOsOhpAX4A "~Cold Fusion(youtube)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsXVk37bltHxD1rDPwtNM8Q

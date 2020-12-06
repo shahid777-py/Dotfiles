@@ -5,7 +5,30 @@
 export ZSH=$HOME/.oh-my-zsh
 
 autoload -U colors && colors
- PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+ # PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+ source ~/.zsh/git-prompt.zsh/git-prompt.zsh
+ # source ~/.zsh/git-prompt.zsh/examples/multiline.zsh
+ source ~/.zsh/git-prompt.zsh/examples/default.zsh
+# ZSH_THEME_GIT_PROMPT_TAG="%{$fg_bold[magenta]%}"
+ # source ~/git-prompt.zsh/examples/default.zsh
+
+# Theming variables for primary prompt
+# ZSH_THEME_GIT_PROMPT_PREFIX="["
+# ZSH_THEME_GIT_PROMPT_SUFFIX="] "
+# ZSH_THEME_GIT_PROMPT_SEPARATOR="|"
+# ZSH_THEME_GIT_PROMPT_DETACHED="%{$fg_bold[cyan]%}:"
+# ZSH_THEME_GIT_PROMPT_BRANCH="%{$fg_bold[magenta]%}"
+# ZSH_THEME_GIT_PROMPT_UPSTREAM_SYMBOL="%{$fg_bold[yellow]%}⟳ "
+# ZSH_THEME_GIT_PROMPT_UPSTREAM_PREFIX="%{$fg[red]%}(%{$fg[yellow]%}"
+# ZSH_THEME_GIT_PROMPT_UPSTREAM_SUFFIX="%{$fg[red]%})"
+# ZSH_THEME_GIT_PROMPT_BEHIND="↓"
+# ZSH_THEME_GIT_PROMPT_AHEAD="↑"
+# ZSH_THEME_GIT_PROMPT_UNMERGED="%{$fg[red]%}✖"
+# ZSH_THEME_GIT_PROMPT_STAGED="%{$fg[green]%}●"
+# ZSH_THEME_GIT_PROMPT_UNSTAGED="%{$fg[red]%}✚"
+# ZSH_THEME_GIT_PROMPT_UNTRACKED="…"
+# ZSH_THEME_GIT_PROMPT_STASHED="%{$fg[blue]%}⚑"
+# ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 
 # Load aliases and shortcuts if existent.
 [ -f "$HOME/.config/shortcutrc" ] && source "$HOME/.config/shortcutrc"
@@ -81,7 +104,11 @@ POWERLEVEL9K_DISABLE_PROMPT=true
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-completions fast-syntax-highlighting zsh-autosuggestions zsh-system-clipboard)
+
+plugins=( zsh-completions fast-syntax-highlighting zsh-autosuggestions zsh-system-clipboard)
+# plugins=( zsh-completions fast-syntax-highlighting  zsh-autosuggestion zsh-system-clipboard)
+
+
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
 # User configuration
@@ -222,6 +249,8 @@ bindkey -s '^a' 'bc -l\n'
 
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'
 
+# bindkey -s '^l' 'clear\n'
+
 bindkey '^[[P' delete-char
 
 # Edit line in vim with ctrl-e:
@@ -298,3 +327,27 @@ LFCD="$HOME/.config/lf/lfcd.sh"
 if [ -f "$LFCD" ]; then
     source "$LFCD"
 fi
+
+tmuxcd () {
+	
+
+	if [[ -z "$TMUX" ]] ;then
+	    ID="$( tmux ls | grep -vm1 attached | cut -d: -f1 )" # get the id of a deattached session
+	    if [[ -z "$ID" ]] ;then # if not available create a new one
+		tmux new-session
+	    else
+		tmux attach-session -t "$ID" # if available attach to it
+	    fi
+	fi
+}
+bindkey -s "^t" "tmuxcd\n"
+# bind widget to Ctrl+X in viins mode
+# bindkey -v viins '^T' "tmux attach"
+# # bind widget to Ctrl+X in vicmd mode Runing With ESC
+# bindkey -v vicmd '^T' "tmux"
+export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship.toml
+
+
+
+# eval "$(starship init zsh)"
+

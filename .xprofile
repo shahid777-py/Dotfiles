@@ -14,7 +14,9 @@ setbg & 	#(Pywal and wall)
 # pulse.sh & 	#(Pulse Audio kill & start Deamon)
 # buckle & 	#(Keybord Sound Responser)
 help_notif.sh & #(System Manual )
-picom  &
+# picom  &
+picom --experimental-backends -b &
+# picom -f -b &
 dunst &		# Notification deamon
 mpd &		# music player daemon
 # pidof polybar || $HOME/.config/polybar/launch.sh &

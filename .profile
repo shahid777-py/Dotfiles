@@ -1,5 +1,6 @@
 #!/bin/zsh
 export EDITOR="nvim"
+# export TERMINAL="alacritty"
 export TERMINAL="st"
 export BROWSER="brave"
 export READER="zathura"
