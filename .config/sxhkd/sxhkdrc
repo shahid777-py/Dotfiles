@@ -14,9 +14,10 @@ alt  + u
 alt + shift + u
 	wal --theme ~/colors_nord.json
 super + shift + u
-	wal --theme ~/colors2.json
-super + u
 	wal --theme ~/colors.json
+super + u
+	wal --theme ~/base16-dracula.json
+
 super + Print
 	i3-scrot -w 
 alt + p
@@ -24,8 +25,8 @@ alt + p
 alt + space 
 	xset r rate 300 50 && setxkbmap -option caps:escape ; setxkbmap -option print:print
 
-# alt + b
-# 	pidof picom && pkill picom || picom -b
+alt + b
+	pidof picom && pkill picom || picom -b
 
 alt + t
 	$TERMINAL -e transmission-remote-cli

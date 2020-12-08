@@ -541,7 +541,7 @@ function! ToggleNord()
 		set bg=dark
 		set termguicolors
 		colorscheme nord
-		hi Normal ctermbg=NONE guibg=NONE
+		" hi Normal ctermbg=NONE guibg=NONE
 		let s:nord = 1
 		" let g:lightline = {}
 		" let g:lightline.colorscheme = 'tender'
@@ -671,7 +671,7 @@ augroup nord-theme-overrides
   autocmd ColorScheme nord highlight pythonAttribute ctermfg=14 guifg=#8FBCBB
 augroup END
 
-	nnoremap <silent><c-m> : colorscheme one-monokai <cr><cr>
+	nnoremap <silent><c-m> :silent! colorscheme one-monokai <cr>
 
 
 
@@ -684,7 +684,11 @@ augroup END
 				let g:edge_diagnostic_line_highlight = 1
 				let g:edge_current_word = 'bold'
 				colorscheme edge
-		let g:gruvbox_material_background = 'hard'
+		let g:gruvbox_material_background = 'soft'
     let g:gruvbox_material_enable_italic = 1
     let g:gruvbox_material_disable_italic_comment = 1
 		" let g:gruvbox_material_transparent_background = 1
+
+let g:monokai_term_italic = 1
+    let g:monokai_gui_italic = 1
+

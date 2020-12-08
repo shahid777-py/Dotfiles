@@ -105,12 +105,13 @@ POWERLEVEL9K_DISABLE_PROMPT=true
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-plugins=( zsh-completions fast-syntax-highlighting zsh-autosuggestions zsh-system-clipboard)
 # plugins=( zsh-completions fast-syntax-highlighting  zsh-autosuggestion zsh-system-clipboard)
 
+plugins=( zsh-completions fast-syntax-highlighting zsh-autosuggestions zsh-system-clipboard)
 
 source $ZSH/oh-my-zsh.sh
 autoload -U compinit && compinit
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -346,7 +347,6 @@ bindkey -s "^t" "tmuxcd\n"
 # # bind widget to Ctrl+X in vicmd mode Runing With ESC
 # bindkey -v vicmd '^T' "tmux"
 export STARSHIP_CONFIG=$XDG_CONFIG_HOME/starship.toml
-
 
 
 # eval "$(starship init zsh)"
