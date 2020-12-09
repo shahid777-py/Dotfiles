@@ -671,7 +671,7 @@ augroup nord-theme-overrides
   autocmd ColorScheme nord highlight pythonAttribute ctermfg=14 guifg=#8FBCBB
 augroup END
 
-	nnoremap <silent><c-m> :silent! colorscheme one-monokai <cr>
+	nnoremap <silent><c-m> : colorscheme one-monokai <cr>
 
 
 
