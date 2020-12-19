@@ -14,21 +14,24 @@ call vundle#begin()
 call plug#begin('~/.config/nvim/plugged')
 Plug 'sainnhe/gruvbox-material'
 Plug 'fratajczak/one-monokai-vim'
+Plug 'phanviet/vim-monokai-pro'
 Plug 'patstockwell/vim-monokai-tasty'
 Plug 'crusoexia/vim-monokai'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'sainnhe/sonokai'
+Plug 'ParamagicDev/vim-medic_chalk'
+Plug 'jcherven/jummidark.vim'
 Plug 'sainnhe/edge'
 Plug 'sainnhe/forest-night'
 " '' Erlang Runtime
 " Plug 'machakann/vim-highlightedyank'
 Plug 'chriskempson/base16-vim'
-Plug 'vim-crystal/vim-crystal'
 Plug 'chriskempson/base16-vim'
 Plug 'cocopon/iceberg.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'arcticicestudio/nord-vim'
+Plug 'ntk148v/vim-horizon'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'lifepillar/vim-solarized8'
 " Plug 'vim-erlang/vim-erlang-runtime'
@@ -69,8 +72,8 @@ Plug 'tpope/vim-commentary'
 "" Navbar
 Plug 'itchyny/lightline.vim'
 "CSS
-" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
-Plug 'ap/vim-css-color'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+" Plug 'ap/vim-css-color'
 "Go
 " Plug 'fatih/vim-go', {'do': ':GoInstallBinaries'}
 " Pairs
@@ -195,7 +198,8 @@ call vundle#end()
 	set ic
 
 " Highlight Searches"
-	set nohlsearch
+	" set nohlsearch
+	set hlsearch
 	nnoremap <c-c> :set hlsearch! hlsearch?<CR>
 
 " Clear Buffer
@@ -371,20 +375,20 @@ call vundle#end()
 	let g:python_highlight_indent_errors = 0
 	let g:indentLine_color_gui = '#A4E57E'
 
-" " Vim Hexokinase
-" 	  let g:Hexokinase_refreshEvents = ['InsertLeave']
-" 	  let g:Hexokinase_highlighters = ['backgroundfull']
-" 	  let g:Hexokinase_optInPatterns = [
-" 	  \     'full_hex',
-" 	  \     'triple_hex',
-" 	  \     'rgb',
-" 	  \     'rgba',
-" 	  \     'hsl',
-" 	  \     'hsla',
-" 	  \     'colour_names'
-" 	  \ ]
-" " Reenable hexokinase on enter
-" 	autocmd VimEnter * HexokinaseTurnOn
+" Vim Hexokinase
+	  let g:Hexokinase_refreshEvents = ['InsertLeave']
+	  let g:Hexokinase_highlighters = ['backgroundfull']
+	  let g:Hexokinase_optInPatterns = [
+	  \     'full_hex',
+	  \     'triple_hex',
+	  \     'rgb',
+	  \     'rgba',
+	  \     'hsl',
+	  \     'hsla',
+	  \     'colour_names'
+	  \ ]
+" Reenable hexokinase on enter
+	autocmd VimEnter * HexokinaseTurnOn
 
 
 " Select all
@@ -498,29 +502,23 @@ nnoremap <C-]> :call AutoPairsJump()<CR>
 let s:color = 1       "Gruvbox Activated"
 function! ToggleColor()
 	if s:color == 1
-		set termguicolors
-		let g:gruvbox_material_background = 'soft'
-    let g:gruvbox_material_enable_italic = 1
-    let g:gruvbox_material_disable_italic_comment = 1
-		let g:gruvbox_material_transparent_background = 1
-		colorscheme gruvbox-material
-		hi Normal ctermbg=NONE guibg=NONE
-		let s:color = 0
-		let g:lightline = {}
-		let g:lightline.colorscheme = 'gruvbox-material'
-		set laststatus=0
+			set termguicolors
+			colorscheme monokai
+			hi Normal guibg=NONE
+			hi LineNr guibg=NONE 
+			highlight CursorLineNr gui=bold guibg=NONE
+
+			" set background=dark
+			" hi Normal ctermbg=NONE guibg=NONE
+			let s:color = 0
+			set laststatus=0
 	else
-		set bg=dark
-		" hi Normal ctermbg=NONE guibg=NONE
-		" set notermguicolors
-		" colorscheme default
-		set termguicolors
-		colorscheme edge
-		set bg=dark
-		let s:color = 1
-		let g:lightline = {}
-		let g:lightline.colorscheme = 'dracula'
-		" let g:lightline.colorscheme = 'tender'
+			" set bg=dark
+			" hi Normal ctermbg=NONE guibg=NONE
+			" set termguicolors
+			colorscheme one-monokai
+			" set bg=dark
+			let s:color = 1
 
 	endif
 endfunction
@@ -528,20 +526,16 @@ endfunction
 let s:nord = 1       "Gruvbox Activated"
 function! ToggleNord()
 	if s:nord == 1
+
+		" set termguicolors
 		set bg=dark
 		colorscheme nord
-		" hi Normal ctermbg=NONE guibg=NONE
 		let s:nord = 0
-		" set laststatus=2
-		" let g:lightline = {}
-		" let g:lightline.colorscheme = 'nord'
-
-
 	else
 		set bg=dark
 		set termguicolors
 		colorscheme nord
-		" hi Normal ctermbg=NONE guibg=NONE
+		hi Normal ctermbg=NONE guibg=NONE
 		let s:nord = 1
 		" let g:lightline = {}
 		" let g:lightline.colorscheme = 'tender'
@@ -596,6 +590,19 @@ function! ToggleBar()
 	endif
 endfunction
 
+let s:switch = 1
+function! Monokaitoggle()
+	if s:switch == 0
+		colorscheme one-monokai 
+		hi Normal guibg=NONE
+		hi LineNr guibg=NONE guifg=NONE
+		highlight CursorLineNr gui=bold guibg=NONE
+		let s:switch = 1
+	else
+		colorscheme one-monokai
+		let s:switch = 0
+	endif
+endfunction
 
 
 nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
@@ -622,13 +629,18 @@ let g:lightline.colorscheme = 'dracula'
 	" set bg=light
 	set bg=dark
 	set termguicolors
+	colorscheme one-monokai
+	hi Normal guibg=NONE
+	hi LineNr guibg=NONE 
+	highlight CursorLineNr gui=bold guibg=NONE
+
 	" " let g:deus_termcolors=256
-	hi Normal ctermbg=NONE guibg=NONE
+	" hi Normal ctermbg=NONE guibg=NONE
 	" hi NonText ctermbg=NONE guibg=NONE
 	" nnoremap <M-n> :colorscheme gruvbox<CR>
 	" nnoremap <silent><A-t> :hi Normal ctermbg=NONE guibg=NONE<CR>
 
-	" nnoremap <silent><C-t> :call ToggleColor()<cr>
+	nnoremap <silent><C-t> :call ToggleColor()<cr>
 
 
 source $HOME/.config/nvim/my_snippets.vim
@@ -671,7 +683,7 @@ augroup nord-theme-overrides
   autocmd ColorScheme nord highlight pythonAttribute ctermfg=14 guifg=#8FBCBB
 augroup END
 
-	nnoremap <silent><c-m> : colorscheme one-monokai <cr>
+" nmap <C-m> : colorscheme monokai <CR>
 
 
 
@@ -683,7 +695,6 @@ augroup END
 				let g:edge_menu_selection_background = 'purple'
 				let g:edge_diagnostic_line_highlight = 1
 				let g:edge_current_word = 'bold'
-				colorscheme edge
 		let g:gruvbox_material_background = 'soft'
     let g:gruvbox_material_enable_italic = 1
     let g:gruvbox_material_disable_italic_comment = 1
@@ -691,4 +702,3 @@ augroup END
 
 let g:monokai_term_italic = 1
     let g:monokai_gui_italic = 1
-

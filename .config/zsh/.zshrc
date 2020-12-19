@@ -1,6 +1,37 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
 
+bindkey -s '^o' 'lfcd\n'  # zsh
+
+
+if [ "$_START_LFCD" ]; then
+    unset _START_LFCD
+    lfcd
+fi
+if [ "$_BRUNO_RUN_LF" ]; then
+    unset _BRUNO_RUN_LF
+    lfcd
+fi
+# if [ "$_BRUNO_RUN_EDITOR" ]; then
+#     unset _BRUNO_RUN_EDITOR
+#     $EDITOR ~/data/index.md
+# fi
+
+# Or even fancier: start in the directory of the currently focused
+# window using xcwd
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -230,22 +261,6 @@ preexec() { echo -ne '\e[5 q' ;}
 
 
 # Use lf to switch directories and bind it to ctrl-o
-lfcd () {
-    tmp="$(mktemp)"
-    lf -last-dir-path="$tmp" "$@"
-    if [ -f "$tmp" ]; then
-        dir="$(cat "$tmp")"
-        rm -f "$tmp"
-        if [ -d "$dir" ]; then
-            if [ "$dir" != "$(pwd)" ]; then
-                cd "$dir"
-            fi
-        fi
-    fi
-}
-
-bindkey -s '^o' 'lfcd\n'  # zsh
-
 bindkey -s '^a' 'bc -l\n'
 
 bindkey -s '^f' 'cd "$(dirname "$(fzf)")"\n'

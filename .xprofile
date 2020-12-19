@@ -27,7 +27,7 @@ transmission-daemon &
 redshift &
 export _JAVA_AWT_WM_NONREPARENTING=1 &
 light -S 15 &
- 
+ flashfocus &
 # autochangewall.sh &
 # restore_alsa() {
 #  while [ -z "$(pidof pulseaudio)" ]; do

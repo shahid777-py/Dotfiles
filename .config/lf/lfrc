@@ -245,7 +245,6 @@ map gE cd /etc
 map gU. cd /usr
 map gUs cd /usr/share
 ####----Shortcuts----####
-map gm cd ~/Entertainment/Movies
 map g2 cd ~/2020
 map ga cd ~/Courses/Bash/Linux Bash Shell Scripting Complete Guide (incl. AWK  SED)/8. AWK
 map gl cd /home/shahid/Luke_Smith
@@ -274,7 +273,8 @@ map gn cd ~/.config/nvim
 map ; mark-save
 map S $$SHEL
 # map ' mark-load
-map gM cd /run/media/shahid
+map gm cd /home/shahid/Courses/MIT-OCW
+
 
 
 map bg  $setbg "$f"

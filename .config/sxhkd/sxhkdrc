@@ -2,6 +2,8 @@
 # 	prompt "Exit the Session " "killall dwm"
 # super + c
 # 	st -e "calcurse"
+# super + apostrophe
+# 	st -e bc -lq
 super + n
 	$TERMINAL -e nvim -c VimwikiIndex
 super + shift + n
@@ -20,12 +22,12 @@ super + u
 
 super + Print
 	i3-scrot -w 
-alt + p
-	pauseall_mpv.sh
+# alt + p
+# 	pauseall_mpv.sh
 alt + space 
 	xset r rate 300 50 && setxkbmap -option caps:escape ; setxkbmap -option print:print
 
-alt + b
+alt + p
 	pidof picom && pkill picom || picom -b
 
 alt + t
@@ -42,7 +44,7 @@ super + ctrl + m
 	$TERMINAL -e alsamixer
 # super + u
 # 	$TERMINAL -e "nmtui-connect"
-alt + Return
+super + Return
 			$TERMINAL -e  "tmux_check"
 alt + shift + Return 
 alt + h
@@ -102,7 +104,7 @@ alt + comma
 alt + w
 	wifi on && notify-send " wifi on 📡"  && pkill -RTMIN+8 dwmblocks
 alt + shift + w
-	wifi off && notify-send " wifi off 🛑" && pkill -RTMIN+8 dwmblocks
+	st -e nmtui
 super + shift + m
 	dmenumount
 super + shift + u
@@ -147,10 +149,11 @@ alt + e
 alt + shift + l
 	wiki-local-pages
 super + r
-		$TERMINAL -e  zsh -i -c 'lfcd'
+	cd "`xcwd`" &&  _START_LFCD=1 st
+# $TERMINAL -e  lf
 
-super + Return
-	$TERMINAL
+# super + Return
+# 	$TERMINAL
 #i3 focus mode_toggle
 alt + x
 	xrdb ~/.Xresources
