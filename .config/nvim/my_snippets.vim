@@ -14,6 +14,8 @@
 	autocmd Filetype markdown,rmd inoremap ,d <Esc>0i✅<space><space><Esc>l
 	autocmd Filetype markdown,rmd nnoremap ,d <Esc>0i✅<space><space><Esc>l
 	autocmd Filetype markdown,rmd nnoremap ,u 0xxx
+	autocmd Filetype markdown,rmd inoremap ,r ₹
+	autocmd Filetype markdown,rmd nnoremap ,r ₹
 	autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
 	autocmd Filetype markdown,rmd inoremap ,e **<++><Esc>F*i
 	autocmd Filetype markdown,rmd inoremap ,h ====<Space><++><Esc>F=hi
